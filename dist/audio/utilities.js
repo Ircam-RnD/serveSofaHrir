@@ -3,9 +3,6 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.dBToLin = dBToLin;
-exports.createDiracBuffer = createDiracBuffer;
-exports.createNoiseBuffer = createNoiseBuffer;
 exports.resampleFloat32Array = resampleFloat32Array;
 /**
  * @fileOverview Audio utilities
@@ -13,81 +10,6 @@ exports.resampleFloat32Array = resampleFloat32Array;
  * @copyright 2016 IRCAM, Paris, France
  * @license BSD-3-Clause
  */
-
-/**
- * Convert a dB value to a linear amplitude, i.e. -20dB gives 0.1
- *
- * @param {Number} dBValue
- * @returns {Number}
- */
-function dBToLin(dBValue) {
-  var factor = 1 / 20;
-  return Math.pow(10, dBValue * factor);
-}
-
-/**
- * Create a Dirac buffer, zero-padded.
- *
- * Warning: the default length is 2 samples,
- * to by-pass a bug in Safari ≤ 9.
- *
- * @param {Object} options
- * @param {AudioContext} options.audioContext must be defined
- * @param {Number} [options.channelCount=1]
- * @param {Number} [options.gain=0] in dB
- * @param {Number} [options.length=2] in samples
- * @returns {AudioBuffer}
- */
-function createDiracBuffer() {
-  var options = arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0];
-
-  var context = options.audioContext;
-
-  var length = typeof options.length !== 'undefined' ? options.length : 2; // Safari ≤9 needs one more
-  var channelCount = typeof options.channelCount !== 'undefined' ? options.channelCount : 1;
-  var gain = typeof options.gain !== 'undefined' ? options.gain : 0; // dB
-
-  var buffer = context.createBuffer(channelCount, length, context.sampleRate);
-  var data = buffer.getChannelData(0);
-
-  var amplitude = dBToLin(gain);
-  data[0] = amplitude;
-  // already padded with zeroes
-
-  return buffer;
-}
-
-/**
- * Create a noise buffer.
- *
- * @param {Object} options
- * @param {AudioContext} options.audioContext must be defined
- * @param {Number} [options.channelCount=1]
- * @param {Number} [options.duration=5] in seconds
- * @param {Number} [options.gain=-30] in dB
- * @returns {AudioBuffer}
- */
-function createNoiseBuffer() {
-  var options = arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0];
-
-  var context = options.audioContext;
-  var duration = typeof options.duration !== 'undefined' ? options.duration : 5;
-
-  var gain = typeof options.gain !== 'undefined' ? options.gain : -30; // dB
-
-  var channelCount = typeof options.channelCount !== 'undefined' ? options.channelCount : context.destination.channelCount;
-
-  var length = duration * context.sampleRate;
-  var amplitude = dBToLin(gain);
-  var buffer = context.createBuffer(channelCount, length, context.sampleRate);
-  for (var c = 0; c < channelCount; ++c) {
-    var data = buffer.getChannelData(c);
-    for (var i = 0; i < length; ++i) {
-      data[i] = amplitude * (Math.random() * 2 - 1);
-    }
-  }
-  return buffer;
-}
 
 /**
  * Convert an array, typed or not, to a Float32Array, with possible re-sampling.
@@ -141,8 +63,5 @@ function resampleFloat32Array() {
 }
 
 exports.default = {
-  dBToLin: dBToLin,
-  createDiracBuffer: createDiracBuffer,
-  createNoiseBuffer: createNoiseBuffer,
   resampleFloat32Array: resampleFloat32Array
 };

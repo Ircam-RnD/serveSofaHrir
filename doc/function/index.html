@@ -19,7 +19,7 @@
   <a href="identifiers.html">Reference</a>
   <a href="source.html">Source</a>
   
-  <a data-ice="repoURL" href="https://github.com/Ircam-RnD/binauralFIR" class="repo-url-github">Repository</a>
+  <a data-ice="repoURL" href="https://github.com/Ircam-RnD/serveSofaHrir" class="repo-url-github">Repository</a>
   <div class="search-box">
   <span>
     <img src="./image/search.png">
@@ -36,16 +36,10 @@
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-license">license</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-name">name</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-version">version</a></span></span></li>
-<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">audio</div><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/audio/BinauralPanner.js~BinauralPanner.html">BinauralPanner</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/audio/Source.js~Source.html">Source</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-createDiracBuffer">createDiracBuffer</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-createNoiseBuffer">createNoiseBuffer</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-dBToLin">dBToLin</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-resampleFloat32Array">resampleFloat32Array</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">audio</div><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-resampleFloat32Array">resampleFloat32Array</a></span></span></li>
 <li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">common</div><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-almostEquals">almostEquals</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-almostEqualsModulo">almostEqualsModulo</a></span></span></li>
-<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">geometry</div><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/geometry/Listener.js~Listener.html">Listener</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-distance">distance</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">geometry</div><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-distance">distance</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-distanceSquared">distanceSquared</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-glToSofaCartesian">glToSofaCartesian</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-glToSofaSpherical">glToSofaSpherical</a></span></span></li>
@@ -215,84 +209,6 @@ modulo.</p>
         
         
         <div data-ice="description"><p>Get the cosinus of an angle in degrees.</p>
-</div>
-      </div>
-    </td>
-    <td>
-      
-      
-    </td>
-  </tr>
-<tr data-ice="target">
-    <td>
-      <span class="access" data-ice="access">public</span>
-      
-      
-      
-      <span class="override" data-ice="override"></span>
-    </td>
-    <td>
-      <div>
-        <p>
-           <span data-ice="name"><span><a href="function/index.html#static-function-createDiracBuffer">createDiracBuffer</a></span></span><span data-ice="signature">(options: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span>): <span>AudioBuffer</span></span>
-        </p>
-      </div>
-      <div>
-        
-        
-        <div data-ice="description"><p>Create a Dirac buffer, zero-padded.</p>
-</div>
-      </div>
-    </td>
-    <td>
-      
-      
-    </td>
-  </tr>
-<tr data-ice="target">
-    <td>
-      <span class="access" data-ice="access">public</span>
-      
-      
-      
-      <span class="override" data-ice="override"></span>
-    </td>
-    <td>
-      <div>
-        <p>
-           <span data-ice="name"><span><a href="function/index.html#static-function-createNoiseBuffer">createNoiseBuffer</a></span></span><span data-ice="signature">(options: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span>): <span>AudioBuffer</span></span>
-        </p>
-      </div>
-      <div>
-        
-        
-        <div data-ice="description"><p>Create a noise buffer.</p>
-</div>
-      </div>
-    </td>
-    <td>
-      
-      
-    </td>
-  </tr>
-<tr data-ice="target">
-    <td>
-      <span class="access" data-ice="access">public</span>
-      
-      
-      
-      <span class="override" data-ice="override"></span>
-    </td>
-    <td>
-      <div>
-        <p>
-           <span data-ice="name"><span><a href="function/index.html#static-function-dBToLin">dBToLin</a></span></span><span data-ice="signature">(dBValue: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span>): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span></span>
-        </p>
-      </div>
-      <div>
-        
-        
-        <div data-ice="description"><p>Convert a dB value to a linear amplitude, i.e.</p>
 </div>
       </div>
     </td>
@@ -972,7 +888,7 @@ modulo.</p>
     </span>
   </h3>
 
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {almostEquals} from &apos;<span><a href="file/src/common/utilities.js.html#lineNumber16">binaural/src/common/utilities.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {almostEquals} from &apos;<span><a href="file/src/common/utilities.js.html#lineNumber16">serveSofaHrir/src/common/utilities.js</a></span>&apos;</code></pre></div>
   
   
   <div data-ice="description"><p>Test whether a value is around a reference, given a tolerance.</p>
@@ -1053,7 +969,7 @@ modulo.</p>
     </span>
   </h3>
 
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {almostEqualsModulo} from &apos;<span><a href="file/src/common/utilities.js.html#lineNumber30">binaural/src/common/utilities.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {almostEqualsModulo} from &apos;<span><a href="file/src/common/utilities.js.html#lineNumber30">serveSofaHrir/src/common/utilities.js</a></span>&apos;</code></pre></div>
   
   
   <div data-ice="description"><p>Test whether a value is around a reference, given a tolerance and a
@@ -1141,7 +1057,7 @@ modulo.</p>
     </span>
   </h3>
 
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {atan2} from &apos;<span><a href="file/src/geometry/degree.js.html#lineNumber69">binaural/src/geometry/degree.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {atan2} from &apos;<span><a href="file/src/geometry/degree.js.html#lineNumber69">serveSofaHrir/src/geometry/degree.js</a></span>&apos;</code></pre></div>
   
   
   <div data-ice="description"><p>Get the arc-tangent (2 arguments) of 2 angles in degrees.</p>
@@ -1214,7 +1130,7 @@ modulo.</p>
     </span>
   </h3>
 
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {conformSofaCoordinateSystem} from &apos;<span><a href="file/src/sofa/parseSofa.js.html#lineNumber246">binaural/src/sofa/parseSofa.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {conformSofaCoordinateSystem} from &apos;<span><a href="file/src/sofa/parseSofa.js.html#lineNumber246">serveSofaHrir/src/sofa/parseSofa.js</a></span>&apos;</code></pre></div>
   
   
   <div data-ice="description"><p>Prefix SOFA coordinate system with <code>sofa</code>.</p>
@@ -1295,7 +1211,7 @@ modulo.</p>
     </span>
   </h3>
 
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {cos} from &apos;<span><a href="file/src/geometry/degree.js.html#lineNumber48">binaural/src/geometry/degree.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {cos} from &apos;<span><a href="file/src/geometry/degree.js.html#lineNumber48">serveSofaHrir/src/geometry/degree.js</a></span>&apos;</code></pre></div>
   
   
   <div data-ice="description"><p>Get the cosinus of an angle in degrees.</p>
@@ -1348,269 +1264,6 @@ modulo.</p>
   
 </div>
 <div class="detail" data-ice="detail">
-  <h3 data-ice="anchor" id="static-function-createDiracBuffer">
-    <span class="access" data-ice="access">public</span>
-    
-    
-    
-    
-    <span data-ice="name">createDiracBuffer</span><span data-ice="signature">(options: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span>): <span>AudioBuffer</span></span>
-    <span class="right-info">
-      
-      
-      <span data-ice="source"><span><a href="file/src/audio/utilities.js.html#lineNumber32">source</a></span></span>
-    </span>
-  </h3>
-
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {createDiracBuffer} from &apos;<span><a href="file/src/audio/utilities.js.html#lineNumber32">binaural/src/audio/utilities.js</a></span>&apos;</code></pre></div>
-  
-  
-  <div data-ice="description"><p>Create a Dirac buffer, zero-padded.</p>
-<p>Warning: the default length is 2 samples,
-to by-pass a bug in Safari &#x2264; 9.</p>
-</div>
-
-  
-
-  <div data-ice="properties"><div data-ice="properties">
-  <h4 data-ice="title">Params:</h4>
-  <table class="params">
-    <thead>
-    <tr><td>Name</td><td>Type</td><td>Attribute</td><td>Description</td></tr>
-    </thead>
-    <tbody>
-    
-    <tr data-ice="property" data-depth="0">
-      <td data-ice="name" data-depth="0">options</td>
-      <td data-ice="type"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span></td>
-      <td data-ice="appendix"></td>
-      <td data-ice="description"></td>
-    </tr>
-<tr data-ice="property" data-depth="1">
-      <td data-ice="name" data-depth="1">options.audioContext</td>
-      <td data-ice="type"><span><a href="https://developer.mozilla.org/en/docs/Web/API/AudioContext">AudioContext</a></span></td>
-      <td data-ice="appendix"></td>
-      <td data-ice="description"><p>must be defined</p>
-</td>
-    </tr>
-<tr data-ice="property" data-depth="1">
-      <td data-ice="name" data-depth="1">options.channelCount</td>
-      <td data-ice="type"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span></td>
-      <td data-ice="appendix"><ul><li>optional</li>
-<li>default: 1</li></ul></td>
-      <td data-ice="description"></td>
-    </tr>
-<tr data-ice="property" data-depth="1">
-      <td data-ice="name" data-depth="1">options.gain</td>
-      <td data-ice="type"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span></td>
-      <td data-ice="appendix"><ul><li>optional</li>
-<li>default: 0</li></ul></td>
-      <td data-ice="description"><p>in dB</p>
-</td>
-    </tr>
-<tr data-ice="property" data-depth="1">
-      <td data-ice="name" data-depth="1">options.length</td>
-      <td data-ice="type"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span></td>
-      <td data-ice="appendix"><ul><li>optional</li>
-<li>default: 2</li></ul></td>
-      <td data-ice="description"><p>in samples</p>
-</td>
-    </tr>
-</tbody>
-  </table>
-</div>
-</div>
-
-  <div class="return-params" data-ice="returnParams">
-    <h4>Return:</h4>
-    <table>
-      <tr>
-        <td class="return-type" data-ice="returnType"><span>AudioBuffer</span></td>
-        
-      </tr>
-    </table>
-    <div data-ice="returnProperties">
-</div>
-  </div>
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-  
-</div>
-<div class="detail" data-ice="detail">
-  <h3 data-ice="anchor" id="static-function-createNoiseBuffer">
-    <span class="access" data-ice="access">public</span>
-    
-    
-    
-    
-    <span data-ice="name">createNoiseBuffer</span><span data-ice="signature">(options: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span>): <span>AudioBuffer</span></span>
-    <span class="right-info">
-      
-      
-      <span data-ice="source"><span><a href="file/src/audio/utilities.js.html#lineNumber66">source</a></span></span>
-    </span>
-  </h3>
-
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {createNoiseBuffer} from &apos;<span><a href="file/src/audio/utilities.js.html#lineNumber66">binaural/src/audio/utilities.js</a></span>&apos;</code></pre></div>
-  
-  
-  <div data-ice="description"><p>Create a noise buffer.</p>
-</div>
-
-  
-
-  <div data-ice="properties"><div data-ice="properties">
-  <h4 data-ice="title">Params:</h4>
-  <table class="params">
-    <thead>
-    <tr><td>Name</td><td>Type</td><td>Attribute</td><td>Description</td></tr>
-    </thead>
-    <tbody>
-    
-    <tr data-ice="property" data-depth="0">
-      <td data-ice="name" data-depth="0">options</td>
-      <td data-ice="type"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span></td>
-      <td data-ice="appendix"></td>
-      <td data-ice="description"></td>
-    </tr>
-<tr data-ice="property" data-depth="1">
-      <td data-ice="name" data-depth="1">options.audioContext</td>
-      <td data-ice="type"><span><a href="https://developer.mozilla.org/en/docs/Web/API/AudioContext">AudioContext</a></span></td>
-      <td data-ice="appendix"></td>
-      <td data-ice="description"><p>must be defined</p>
-</td>
-    </tr>
-<tr data-ice="property" data-depth="1">
-      <td data-ice="name" data-depth="1">options.channelCount</td>
-      <td data-ice="type"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span></td>
-      <td data-ice="appendix"><ul><li>optional</li>
-<li>default: 1</li></ul></td>
-      <td data-ice="description"></td>
-    </tr>
-<tr data-ice="property" data-depth="1">
-      <td data-ice="name" data-depth="1">options.duration</td>
-      <td data-ice="type"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span></td>
-      <td data-ice="appendix"><ul><li>optional</li>
-<li>default: 5</li></ul></td>
-      <td data-ice="description"><p>in seconds</p>
-</td>
-    </tr>
-<tr data-ice="property" data-depth="1">
-      <td data-ice="name" data-depth="1">options.gain</td>
-      <td data-ice="type"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span></td>
-      <td data-ice="appendix"><ul><li>optional</li>
-<li>default: -30</li></ul></td>
-      <td data-ice="description"><p>in dB</p>
-</td>
-    </tr>
-</tbody>
-  </table>
-</div>
-</div>
-
-  <div class="return-params" data-ice="returnParams">
-    <h4>Return:</h4>
-    <table>
-      <tr>
-        <td class="return-type" data-ice="returnType"><span>AudioBuffer</span></td>
-        
-      </tr>
-    </table>
-    <div data-ice="returnProperties">
-</div>
-  </div>
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-  
-</div>
-<div class="detail" data-ice="detail">
-  <h3 data-ice="anchor" id="static-function-dBToLin">
-    <span class="access" data-ice="access">public</span>
-    
-    
-    
-    
-    <span data-ice="name">dBToLin</span><span data-ice="signature">(dBValue: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span>): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span></span>
-    <span class="right-info">
-      
-      
-      <span data-ice="source"><span><a href="file/src/audio/utilities.js.html#lineNumber14">source</a></span></span>
-    </span>
-  </h3>
-
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {dBToLin} from &apos;<span><a href="file/src/audio/utilities.js.html#lineNumber14">binaural/src/audio/utilities.js</a></span>&apos;</code></pre></div>
-  
-  
-  <div data-ice="description"><p>Convert a dB value to a linear amplitude, i.e. -20dB gives 0.1</p>
-</div>
-
-  
-
-  <div data-ice="properties"><div data-ice="properties">
-  <h4 data-ice="title">Params:</h4>
-  <table class="params">
-    <thead>
-    <tr><td>Name</td><td>Type</td><td>Attribute</td><td>Description</td></tr>
-    </thead>
-    <tbody>
-    
-    <tr data-ice="property" data-depth="0">
-      <td data-ice="name" data-depth="0">dBValue</td>
-      <td data-ice="type"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span></td>
-      <td data-ice="appendix"></td>
-      <td data-ice="description"></td>
-    </tr>
-</tbody>
-  </table>
-</div>
-</div>
-
-  <div class="return-params" data-ice="returnParams">
-    <h4>Return:</h4>
-    <table>
-      <tr>
-        <td class="return-type" data-ice="returnType"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span></td>
-        
-      </tr>
-    </table>
-    <div data-ice="returnProperties">
-</div>
-  </div>
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-  
-</div>
-<div class="detail" data-ice="detail">
   <h3 data-ice="anchor" id="static-function-distance">
     <span class="access" data-ice="access">public</span>
     
@@ -1625,7 +1278,7 @@ to by-pass a bug in Safari &#x2264; 9.</p>
     </span>
   </h3>
 
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {distance} from &apos;<span><a href="file/src/geometry/KdTree.js.html#lineNumber46">binaural/src/geometry/KdTree.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {distance} from &apos;<span><a href="file/src/geometry/KdTree.js.html#lineNumber46">serveSofaHrir/src/geometry/KdTree.js</a></span>&apos;</code></pre></div>
   
   
   <div data-ice="description"><p>Get the distance between to points.</p>
@@ -1736,7 +1389,7 @@ to by-pass a bug in Safari &#x2264; 9.</p>
     </span>
   </h3>
 
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {distanceSquared} from &apos;<span><a href="file/src/geometry/KdTree.js.html#lineNumber26">binaural/src/geometry/KdTree.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {distanceSquared} from &apos;<span><a href="file/src/geometry/KdTree.js.html#lineNumber26">serveSofaHrir/src/geometry/KdTree.js</a></span>&apos;</code></pre></div>
   
   
   <div data-ice="description"><p>Get the squared distance between to points.</p>
@@ -1848,7 +1501,7 @@ to by-pass a bug in Safari &#x2264; 9.</p>
     </span>
   </h3>
 
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {fromRadian} from &apos;<span><a href="file/src/geometry/degree.js.html#lineNumber38">binaural/src/geometry/degree.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {fromRadian} from &apos;<span><a href="file/src/geometry/degree.js.html#lineNumber38">serveSofaHrir/src/geometry/degree.js</a></span>&apos;</code></pre></div>
   
   
   <div data-ice="description"><p>Convert an angle in radians to degrees.</p>
@@ -1917,7 +1570,7 @@ to by-pass a bug in Safari &#x2264; 9.</p>
     </span>
   </h3>
 
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {glToSofaCartesian} from &apos;<span><a href="file/src/geometry/coordinates.js.html#lineNumber94">binaural/src/geometry/coordinates.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {glToSofaCartesian} from &apos;<span><a href="file/src/geometry/coordinates.js.html#lineNumber94">serveSofaHrir/src/geometry/coordinates.js</a></span>&apos;</code></pre></div>
   
   
   <div data-ice="description"><p>Convert openGL coordinates to SOFA cartesian.</p>
@@ -1992,7 +1645,7 @@ to by-pass a bug in Safari &#x2264; 9.</p>
     </span>
   </h3>
 
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {glToSofaSpherical} from &apos;<span><a href="file/src/geometry/coordinates.js.html#lineNumber180">binaural/src/geometry/coordinates.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {glToSofaSpherical} from &apos;<span><a href="file/src/geometry/coordinates.js.html#lineNumber180">serveSofaHrir/src/geometry/coordinates.js</a></span>&apos;</code></pre></div>
   
   
   <div data-ice="description"><p>Convert openGL coordinates to SOFA spherical.</p>
@@ -2067,7 +1720,7 @@ to by-pass a bug in Safari &#x2264; 9.</p>
     </span>
   </h3>
 
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {glToSpat4Cartesian} from &apos;<span><a href="file/src/geometry/coordinates.js.html#lineNumber294">binaural/src/geometry/coordinates.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {glToSpat4Cartesian} from &apos;<span><a href="file/src/geometry/coordinates.js.html#lineNumber294">serveSofaHrir/src/geometry/coordinates.js</a></span>&apos;</code></pre></div>
   
   
   <div data-ice="description"><p>Convert openGL coordinates to Spat4 cartesian.</p>
@@ -2142,7 +1795,7 @@ to by-pass a bug in Safari &#x2264; 9.</p>
     </span>
   </h3>
 
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {glToSpat4Spherical} from &apos;<span><a href="file/src/geometry/coordinates.js.html#lineNumber378">binaural/src/geometry/coordinates.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {glToSpat4Spherical} from &apos;<span><a href="file/src/geometry/coordinates.js.html#lineNumber378">serveSofaHrir/src/geometry/coordinates.js</a></span>&apos;</code></pre></div>
   
   
   <div data-ice="description"><p>Convert openGL coordinates to Spat4 spherical.</p>
@@ -2217,7 +1870,7 @@ to by-pass a bug in Safari &#x2264; 9.</p>
     </span>
   </h3>
 
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {glToSystem} from &apos;<span><a href="file/src/geometry/coordinates.js.html#lineNumber466">binaural/src/geometry/coordinates.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {glToSystem} from &apos;<span><a href="file/src/geometry/coordinates.js.html#lineNumber466">serveSofaHrir/src/geometry/coordinates.js</a></span>&apos;</code></pre></div>
   
   
   <div data-ice="description"><p>Convert openGL coordinates to other system.</p>
@@ -2310,7 +1963,7 @@ to by-pass a bug in Safari &#x2264; 9.</p>
     </span>
   </h3>
 
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {parseDataSet} from &apos;<span><a href="file/src/sofa/parseDataSet.js.html#lineNumber131">binaural/src/sofa/parseDataSet.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {parseDataSet} from &apos;<span><a href="file/src/sofa/parseDataSet.js.html#lineNumber131">serveSofaHrir/src/sofa/parseDataSet.js</a></span>&apos;</code></pre></div>
   
   
   <div data-ice="description"><p>Parse data set meta data into an object of <code>{definition: {key: values}}</code> objects.</p>
@@ -2396,7 +2049,7 @@ to by-pass a bug in Safari &#x2264; 9.</p>
     </span>
   </h3>
 
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {parseSofa} from &apos;<span><a href="file/src/sofa/parseSofa.js.html#lineNumber18">binaural/src/sofa/parseSofa.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {parseSofa} from &apos;<span><a href="file/src/sofa/parseSofa.js.html#lineNumber18">serveSofaHrir/src/sofa/parseSofa.js</a></span>&apos;</code></pre></div>
   
   
   <div data-ice="description"><p>Parses a SOFA JSON string with into an object with <code>name</code>, <code>data</code> and
@@ -2474,11 +2127,11 @@ to by-pass a bug in Safari &#x2264; 9.</p>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/audio/utilities.js.html#lineNumber102">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/audio/utilities.js.html#lineNumber17">source</a></span></span>
     </span>
   </h3>
 
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {resampleFloat32Array} from &apos;<span><a href="file/src/audio/utilities.js.html#lineNumber102">binaural/src/audio/utilities.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {resampleFloat32Array} from &apos;<span><a href="file/src/audio/utilities.js.html#lineNumber17">serveSofaHrir/src/audio/utilities.js</a></span>&apos;</code></pre></div>
   
   
   <div data-ice="description"><p>Convert an array, typed or not, to a Float32Array, with possible re-sampling.</p>
@@ -2566,7 +2219,7 @@ to by-pass a bug in Safari &#x2264; 9.</p>
     </span>
   </h3>
 
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {sin} from &apos;<span><a href="file/src/geometry/degree.js.html#lineNumber58">binaural/src/geometry/degree.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {sin} from &apos;<span><a href="file/src/geometry/degree.js.html#lineNumber58">serveSofaHrir/src/geometry/degree.js</a></span>&apos;</code></pre></div>
   
   
   <div data-ice="description"><p>Get the sinus of an angle in degrees.</p>
@@ -2633,7 +2286,7 @@ to by-pass a bug in Safari &#x2264; 9.</p>
     </span>
   </h3>
 
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {sofaCartesianToGl} from &apos;<span><a href="file/src/geometry/coordinates.js.html#lineNumber74">binaural/src/geometry/coordinates.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {sofaCartesianToGl} from &apos;<span><a href="file/src/geometry/coordinates.js.html#lineNumber74">serveSofaHrir/src/geometry/coordinates.js</a></span>&apos;</code></pre></div>
   
   
   <div data-ice="description"><p>Convert SOFA cartesian coordinates to openGL.</p>
@@ -2708,7 +2361,7 @@ to by-pass a bug in Safari &#x2264; 9.</p>
     </span>
   </h3>
 
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {sofaCartesianToSofaSpherical} from &apos;<span><a href="file/src/geometry/coordinates.js.html#lineNumber114">binaural/src/geometry/coordinates.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {sofaCartesianToSofaSpherical} from &apos;<span><a href="file/src/geometry/coordinates.js.html#lineNumber114">serveSofaHrir/src/geometry/coordinates.js</a></span>&apos;</code></pre></div>
   
   
   <div data-ice="description"><p>Convert SOFA cartesian coordinates to SOFA spherical.</p>
@@ -2783,7 +2436,7 @@ to by-pass a bug in Safari &#x2264; 9.</p>
     </span>
   </h3>
 
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {sofaSphericalToGl} from &apos;<span><a href="file/src/geometry/coordinates.js.html#lineNumber159">binaural/src/geometry/coordinates.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {sofaSphericalToGl} from &apos;<span><a href="file/src/geometry/coordinates.js.html#lineNumber159">serveSofaHrir/src/geometry/coordinates.js</a></span>&apos;</code></pre></div>
   
   
   <div data-ice="description"><p>Convert SOFA spherical coordinates to openGL.</p>
@@ -2858,7 +2511,7 @@ to by-pass a bug in Safari &#x2264; 9.</p>
     </span>
   </h3>
 
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {sofaSphericalToSofaCartesian} from &apos;<span><a href="file/src/geometry/coordinates.js.html#lineNumber138">binaural/src/geometry/coordinates.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {sofaSphericalToSofaCartesian} from &apos;<span><a href="file/src/geometry/coordinates.js.html#lineNumber138">serveSofaHrir/src/geometry/coordinates.js</a></span>&apos;</code></pre></div>
   
   
   <div data-ice="description"><p>Convert SOFA spherical coordinates to SOFA spherical.</p>
@@ -2933,7 +2586,7 @@ to by-pass a bug in Safari &#x2264; 9.</p>
     </span>
   </h3>
 
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {sofaToSofaCartesian} from &apos;<span><a href="file/src/geometry/coordinates.js.html#lineNumber207">binaural/src/geometry/coordinates.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {sofaToSofaCartesian} from &apos;<span><a href="file/src/geometry/coordinates.js.html#lineNumber207">serveSofaHrir/src/geometry/coordinates.js</a></span>&apos;</code></pre></div>
   
   
   <div data-ice="description"><p>Convert coordinates to SOFA cartesian.</p>
@@ -3026,7 +2679,7 @@ to by-pass a bug in Safari &#x2264; 9.</p>
     </span>
   </h3>
 
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {spat4CartesianToGl} from &apos;<span><a href="file/src/geometry/coordinates.js.html#lineNumber274">binaural/src/geometry/coordinates.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {spat4CartesianToGl} from &apos;<span><a href="file/src/geometry/coordinates.js.html#lineNumber274">serveSofaHrir/src/geometry/coordinates.js</a></span>&apos;</code></pre></div>
   
   
   <div data-ice="description"><p>Convert Spat4 cartesian coordinates to openGL.</p>
@@ -3101,7 +2754,7 @@ to by-pass a bug in Safari &#x2264; 9.</p>
     </span>
   </h3>
 
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {spat4CartesianToSpat4Spherical} from &apos;<span><a href="file/src/geometry/coordinates.js.html#lineNumber314">binaural/src/geometry/coordinates.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {spat4CartesianToSpat4Spherical} from &apos;<span><a href="file/src/geometry/coordinates.js.html#lineNumber314">serveSofaHrir/src/geometry/coordinates.js</a></span>&apos;</code></pre></div>
   
   
   <div data-ice="description"><p>Convert Spat4 cartesian coordinates to Spat4 spherical.</p>
@@ -3176,7 +2829,7 @@ to by-pass a bug in Safari &#x2264; 9.</p>
     </span>
   </h3>
 
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {spat4SphericalToGl} from &apos;<span><a href="file/src/geometry/coordinates.js.html#lineNumber357">binaural/src/geometry/coordinates.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {spat4SphericalToGl} from &apos;<span><a href="file/src/geometry/coordinates.js.html#lineNumber357">serveSofaHrir/src/geometry/coordinates.js</a></span>&apos;</code></pre></div>
   
   
   <div data-ice="description"><p>Convert Spat4 spherical coordinates to openGL.</p>
@@ -3251,7 +2904,7 @@ to by-pass a bug in Safari &#x2264; 9.</p>
     </span>
   </h3>
 
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {spat4SphericalToSpat4Cartesian} from &apos;<span><a href="file/src/geometry/coordinates.js.html#lineNumber336">binaural/src/geometry/coordinates.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {spat4SphericalToSpat4Cartesian} from &apos;<span><a href="file/src/geometry/coordinates.js.html#lineNumber336">serveSofaHrir/src/geometry/coordinates.js</a></span>&apos;</code></pre></div>
   
   
   <div data-ice="description"><p>Convert Spat4 spherical coordinates to Spat4 spherical.</p>
@@ -3326,7 +2979,7 @@ to by-pass a bug in Safari &#x2264; 9.</p>
     </span>
   </h3>
 
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {stringifySofa} from &apos;<span><a href="file/src/sofa/parseSofa.js.html#lineNumber82">binaural/src/sofa/parseSofa.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {stringifySofa} from &apos;<span><a href="file/src/sofa/parseSofa.js.html#lineNumber82">serveSofaHrir/src/sofa/parseSofa.js</a></span>&apos;</code></pre></div>
   
   
   <div data-ice="description"><p>Generates a SOFA JSON string from an object.</p>
@@ -3478,7 +3131,7 @@ unknown coordinate system</p>
     </span>
   </h3>
 
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {systemToGl} from &apos;<span><a href="file/src/geometry/coordinates.js.html#lineNumber427">binaural/src/geometry/coordinates.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {systemToGl} from &apos;<span><a href="file/src/geometry/coordinates.js.html#lineNumber427">serveSofaHrir/src/geometry/coordinates.js</a></span>&apos;</code></pre></div>
   
   
   <div data-ice="description"><p>Convert coordinates to openGL.</p>
@@ -3571,7 +3224,7 @@ unknown coordinate system</p>
     </span>
   </h3>
 
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {systemType} from &apos;<span><a href="file/src/geometry/coordinates.js.html#lineNumber403">binaural/src/geometry/coordinates.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {systemType} from &apos;<span><a href="file/src/geometry/coordinates.js.html#lineNumber403">serveSofaHrir/src/geometry/coordinates.js</a></span>&apos;</code></pre></div>
   
   
   <div data-ice="description"><p>Get the coordinate system general type (cartesian or spherical).</p>
@@ -3640,7 +3293,7 @@ or spherical type.</p>
     </span>
   </h3>
 
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {toRadian} from &apos;<span><a href="file/src/geometry/degree.js.html#lineNumber28">binaural/src/geometry/degree.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {toRadian} from &apos;<span><a href="file/src/geometry/degree.js.html#lineNumber28">serveSofaHrir/src/geometry/degree.js</a></span>&apos;</code></pre></div>
   
   
   <div data-ice="description"><p>Convert an angle in degrees to radians.</p>
@@ -3698,7 +3351,7 @@ or spherical type.</p>
 </div>
 
 <footer class="footer">
-  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(0.4.6)</span></a>
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(0.4.7)</span></a>
 </footer>
 
 <script src="script/search_index.js"></script>

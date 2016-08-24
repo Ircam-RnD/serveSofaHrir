@@ -3,39 +3,40 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.sofa = exports.info = exports.geometry = exports.common = exports.audio = undefined;
+exports.ServerDataBase = exports.HrtfSet = undefined;
 
-var _audio = require('./audio');
+var _HrtfSet = require('./sofa/HrtfSet');
 
-var _audio2 = _interopRequireDefault(_audio);
+var _HrtfSet2 = _interopRequireDefault(_HrtfSet);
 
-var _common = require('./common');
+var _ServerDataBase = require('./sofa/ServerDataBase');
 
-var _common2 = _interopRequireDefault(_common);
-
-var _geometry = require('./geometry');
-
-var _geometry2 = _interopRequireDefault(_geometry);
-
-var _info = require('./info');
-
-var _info2 = _interopRequireDefault(_info);
-
-var _sofa = require('./sofa');
-
-var _sofa2 = _interopRequireDefault(_sofa);
+var _ServerDataBase2 = _interopRequireDefault(_ServerDataBase);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-exports.audio = _audio2.default;
-exports.common = _common2.default;
-exports.geometry = _geometry2.default;
-exports.info = _info2.default;
-exports.sofa = _sofa2.default;
+exports.HrtfSet = _HrtfSet2.default;
+exports.ServerDataBase = _ServerDataBase2.default;
 exports.default = {
-  audio: _audio2.default,
-  common: _common2.default,
-  geometry: _geometry2.default,
-  info: _info2.default,
-  sofa: _sofa2.default
+  HrtfSet: _HrtfSet2.default,
+  ServerDataBase: _ServerDataBase2.default
 };
+
+// import audio from './audio';
+// export { audio };
+// import common from './common';
+// export { common };
+// import geometry from './geometry';
+// export { geometry };
+// import info from './info';
+// export { info };
+// import sofa from './sofa';
+// export { sofa };
+
+// export default {
+//   audio,
+//   common,
+//   geometry,
+//   info,
+//   sofa,
+// };

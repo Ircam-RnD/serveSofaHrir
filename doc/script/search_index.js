@@ -1,266 +1,230 @@
 window.esdocSearchIndex = [
   [
-    "binaural/src/audio/binauralpanner.js~binauralpanner",
-    "class/src/audio/BinauralPanner.js~BinauralPanner.html",
-    "<span>BinauralPanner</span> <span class=\"search-result-import-path\">binaural/src/audio/BinauralPanner.js</span>",
-    "class"
-  ],
-  [
-    "binaural/src/sofa/hrtfset.js~hrtfset",
+    "servesofahrir/src/sofa/hrtfset.js~hrtfset",
     "class/src/sofa/HrtfSet.js~HrtfSet.html",
-    "<span>HrtfSet</span> <span class=\"search-result-import-path\">binaural/src/sofa/HrtfSet.js</span>",
+    "<span>HrtfSet</span> <span class=\"search-result-import-path\">serveSofaHrir/src/sofa/HrtfSet.js</span>",
     "class"
   ],
   [
-    "binaural/src/geometry/listener.js~listener",
-    "class/src/geometry/Listener.js~Listener.html",
-    "<span>Listener</span> <span class=\"search-result-import-path\">binaural/src/geometry/Listener.js</span>",
-    "class"
-  ],
-  [
-    "binaural/src/sofa/serverdatabase.js~serverdatabase",
+    "servesofahrir/src/sofa/serverdatabase.js~serverdatabase",
     "class/src/sofa/ServerDataBase.js~ServerDataBase.html",
-    "<span>ServerDataBase</span> <span class=\"search-result-import-path\">binaural/src/sofa/ServerDataBase.js</span>",
+    "<span>ServerDataBase</span> <span class=\"search-result-import-path\">serveSofaHrir/src/sofa/ServerDataBase.js</span>",
     "class"
   ],
   [
-    "binaural/src/audio/source.js~source",
-    "class/src/audio/Source.js~Source.html",
-    "<span>Source</span> <span class=\"search-result-import-path\">binaural/src/audio/Source.js</span>",
-    "class"
-  ],
-  [
-    "binaural/src/common/utilities.js~almostequals",
+    "servesofahrir/src/common/utilities.js~almostequals",
     "function/index.html#static-function-almostEquals",
-    "<span>almostEquals</span> <span class=\"search-result-import-path\">binaural/src/common/utilities.js</span>",
+    "<span>almostEquals</span> <span class=\"search-result-import-path\">serveSofaHrir/src/common/utilities.js</span>",
     "function"
   ],
   [
-    "binaural/src/common/utilities.js~almostequalsmodulo",
+    "servesofahrir/src/common/utilities.js~almostequalsmodulo",
     "function/index.html#static-function-almostEqualsModulo",
-    "<span>almostEqualsModulo</span> <span class=\"search-result-import-path\">binaural/src/common/utilities.js</span>",
+    "<span>almostEqualsModulo</span> <span class=\"search-result-import-path\">serveSofaHrir/src/common/utilities.js</span>",
     "function"
   ],
   [
-    "binaural/src/geometry/degree.js~atan2",
+    "servesofahrir/src/geometry/degree.js~atan2",
     "function/index.html#static-function-atan2",
-    "<span>atan2</span> <span class=\"search-result-import-path\">binaural/src/geometry/degree.js</span>",
+    "<span>atan2</span> <span class=\"search-result-import-path\">serveSofaHrir/src/geometry/degree.js</span>",
     "function"
   ],
   [
-    "binaural/src/sofa/parsesofa.js~conformsofacoordinatesystem",
+    "servesofahrir/src/sofa/parsesofa.js~conformsofacoordinatesystem",
     "function/index.html#static-function-conformSofaCoordinateSystem",
-    "<span>conformSofaCoordinateSystem</span> <span class=\"search-result-import-path\">binaural/src/sofa/parseSofa.js</span>",
+    "<span>conformSofaCoordinateSystem</span> <span class=\"search-result-import-path\">serveSofaHrir/src/sofa/parseSofa.js</span>",
     "function"
   ],
   [
-    "binaural/src/geometry/degree.js~cos",
+    "servesofahrir/src/geometry/degree.js~cos",
     "function/index.html#static-function-cos",
-    "<span>cos</span> <span class=\"search-result-import-path\">binaural/src/geometry/degree.js</span>",
+    "<span>cos</span> <span class=\"search-result-import-path\">serveSofaHrir/src/geometry/degree.js</span>",
     "function"
   ],
   [
-    "binaural/src/audio/utilities.js~creatediracbuffer",
-    "function/index.html#static-function-createDiracBuffer",
-    "<span>createDiracBuffer</span> <span class=\"search-result-import-path\">binaural/src/audio/utilities.js</span>",
-    "function"
-  ],
-  [
-    "binaural/src/audio/utilities.js~createnoisebuffer",
-    "function/index.html#static-function-createNoiseBuffer",
-    "<span>createNoiseBuffer</span> <span class=\"search-result-import-path\">binaural/src/audio/utilities.js</span>",
-    "function"
-  ],
-  [
-    "binaural/src/audio/utilities.js~dbtolin",
-    "function/index.html#static-function-dBToLin",
-    "<span>dBToLin</span> <span class=\"search-result-import-path\">binaural/src/audio/utilities.js</span>",
-    "function"
-  ],
-  [
-    "binaural/src/info.js~description",
+    "servesofahrir/src/info.js~description",
     "variable/index.html#static-variable-description",
-    "<span>description</span> <span class=\"search-result-import-path\">binaural/src/info.js</span>",
+    "<span>description</span> <span class=\"search-result-import-path\">serveSofaHrir/src/info.js</span>",
     "variable"
   ],
   [
-    "binaural/src/geometry/kdtree.js~distance",
+    "servesofahrir/src/geometry/kdtree.js~distance",
     "function/index.html#static-function-distance",
-    "<span>distance</span> <span class=\"search-result-import-path\">binaural/src/geometry/KdTree.js</span>",
+    "<span>distance</span> <span class=\"search-result-import-path\">serveSofaHrir/src/geometry/KdTree.js</span>",
     "function"
   ],
   [
-    "binaural/src/geometry/kdtree.js~distancesquared",
+    "servesofahrir/src/geometry/kdtree.js~distancesquared",
     "function/index.html#static-function-distanceSquared",
-    "<span>distanceSquared</span> <span class=\"search-result-import-path\">binaural/src/geometry/KdTree.js</span>",
+    "<span>distanceSquared</span> <span class=\"search-result-import-path\">serveSofaHrir/src/geometry/KdTree.js</span>",
     "function"
   ],
   [
-    "binaural/src/geometry/degree.js~fromradian",
+    "servesofahrir/src/geometry/degree.js~fromradian",
     "function/index.html#static-function-fromRadian",
-    "<span>fromRadian</span> <span class=\"search-result-import-path\">binaural/src/geometry/degree.js</span>",
+    "<span>fromRadian</span> <span class=\"search-result-import-path\">serveSofaHrir/src/geometry/degree.js</span>",
     "function"
   ],
   [
-    "binaural/src/geometry/degree.js~fromradianfactor",
+    "servesofahrir/src/geometry/degree.js~fromradianfactor",
     "variable/index.html#static-variable-fromRadianFactor",
-    "<span>fromRadianFactor</span> <span class=\"search-result-import-path\">binaural/src/geometry/degree.js</span>",
+    "<span>fromRadianFactor</span> <span class=\"search-result-import-path\">serveSofaHrir/src/geometry/degree.js</span>",
     "variable"
   ],
   [
-    "binaural/src/geometry/coordinates.js~gltosofacartesian",
+    "servesofahrir/src/geometry/coordinates.js~gltosofacartesian",
     "function/index.html#static-function-glToSofaCartesian",
-    "<span>glToSofaCartesian</span> <span class=\"search-result-import-path\">binaural/src/geometry/coordinates.js</span>",
+    "<span>glToSofaCartesian</span> <span class=\"search-result-import-path\">serveSofaHrir/src/geometry/coordinates.js</span>",
     "function"
   ],
   [
-    "binaural/src/geometry/coordinates.js~gltosofaspherical",
+    "servesofahrir/src/geometry/coordinates.js~gltosofaspherical",
     "function/index.html#static-function-glToSofaSpherical",
-    "<span>glToSofaSpherical</span> <span class=\"search-result-import-path\">binaural/src/geometry/coordinates.js</span>",
+    "<span>glToSofaSpherical</span> <span class=\"search-result-import-path\">serveSofaHrir/src/geometry/coordinates.js</span>",
     "function"
   ],
   [
-    "binaural/src/geometry/coordinates.js~gltospat4cartesian",
+    "servesofahrir/src/geometry/coordinates.js~gltospat4cartesian",
     "function/index.html#static-function-glToSpat4Cartesian",
-    "<span>glToSpat4Cartesian</span> <span class=\"search-result-import-path\">binaural/src/geometry/coordinates.js</span>",
+    "<span>glToSpat4Cartesian</span> <span class=\"search-result-import-path\">serveSofaHrir/src/geometry/coordinates.js</span>",
     "function"
   ],
   [
-    "binaural/src/geometry/coordinates.js~gltospat4spherical",
+    "servesofahrir/src/geometry/coordinates.js~gltospat4spherical",
     "function/index.html#static-function-glToSpat4Spherical",
-    "<span>glToSpat4Spherical</span> <span class=\"search-result-import-path\">binaural/src/geometry/coordinates.js</span>",
+    "<span>glToSpat4Spherical</span> <span class=\"search-result-import-path\">serveSofaHrir/src/geometry/coordinates.js</span>",
     "function"
   ],
   [
-    "binaural/src/geometry/coordinates.js~gltosystem",
+    "servesofahrir/src/geometry/coordinates.js~gltosystem",
     "function/index.html#static-function-glToSystem",
-    "<span>glToSystem</span> <span class=\"search-result-import-path\">binaural/src/geometry/coordinates.js</span>",
+    "<span>glToSystem</span> <span class=\"search-result-import-path\">serveSofaHrir/src/geometry/coordinates.js</span>",
     "function"
   ],
   [
-    "binaural/src/info.js~license",
+    "servesofahrir/src/info.js~license",
     "variable/index.html#static-variable-license",
-    "<span>license</span> <span class=\"search-result-import-path\">binaural/src/info.js</span>",
+    "<span>license</span> <span class=\"search-result-import-path\">serveSofaHrir/src/info.js</span>",
     "variable"
   ],
   [
-    "binaural/src/info.js~name",
+    "servesofahrir/src/info.js~name",
     "variable/index.html#static-variable-name",
-    "<span>name</span> <span class=\"search-result-import-path\">binaural/src/info.js</span>",
+    "<span>name</span> <span class=\"search-result-import-path\">serveSofaHrir/src/info.js</span>",
     "variable"
   ],
   [
-    "binaural/src/sofa/parsedataset.js~parsedataset",
+    "servesofahrir/src/sofa/parsedataset.js~parsedataset",
     "function/index.html#static-function-parseDataSet",
-    "<span>parseDataSet</span> <span class=\"search-result-import-path\">binaural/src/sofa/parseDataSet.js</span>",
+    "<span>parseDataSet</span> <span class=\"search-result-import-path\">serveSofaHrir/src/sofa/parseDataSet.js</span>",
     "function"
   ],
   [
-    "binaural/src/sofa/parsesofa.js~parsesofa",
+    "servesofahrir/src/sofa/parsesofa.js~parsesofa",
     "function/index.html#static-function-parseSofa",
-    "<span>parseSofa</span> <span class=\"search-result-import-path\">binaural/src/sofa/parseSofa.js</span>",
+    "<span>parseSofa</span> <span class=\"search-result-import-path\">serveSofaHrir/src/sofa/parseSofa.js</span>",
     "function"
   ],
   [
-    "binaural/src/audio/utilities.js~resamplefloat32array",
+    "servesofahrir/src/audio/utilities.js~resamplefloat32array",
     "function/index.html#static-function-resampleFloat32Array",
-    "<span>resampleFloat32Array</span> <span class=\"search-result-import-path\">binaural/src/audio/utilities.js</span>",
+    "<span>resampleFloat32Array</span> <span class=\"search-result-import-path\">serveSofaHrir/src/audio/utilities.js</span>",
     "function"
   ],
   [
-    "binaural/src/geometry/degree.js~sin",
+    "servesofahrir/src/geometry/degree.js~sin",
     "function/index.html#static-function-sin",
-    "<span>sin</span> <span class=\"search-result-import-path\">binaural/src/geometry/degree.js</span>",
+    "<span>sin</span> <span class=\"search-result-import-path\">serveSofaHrir/src/geometry/degree.js</span>",
     "function"
   ],
   [
-    "binaural/src/geometry/coordinates.js~sofacartesiantogl",
+    "servesofahrir/src/geometry/coordinates.js~sofacartesiantogl",
     "function/index.html#static-function-sofaCartesianToGl",
-    "<span>sofaCartesianToGl</span> <span class=\"search-result-import-path\">binaural/src/geometry/coordinates.js</span>",
+    "<span>sofaCartesianToGl</span> <span class=\"search-result-import-path\">serveSofaHrir/src/geometry/coordinates.js</span>",
     "function"
   ],
   [
-    "binaural/src/geometry/coordinates.js~sofacartesiantosofaspherical",
+    "servesofahrir/src/geometry/coordinates.js~sofacartesiantosofaspherical",
     "function/index.html#static-function-sofaCartesianToSofaSpherical",
-    "<span>sofaCartesianToSofaSpherical</span> <span class=\"search-result-import-path\">binaural/src/geometry/coordinates.js</span>",
+    "<span>sofaCartesianToSofaSpherical</span> <span class=\"search-result-import-path\">serveSofaHrir/src/geometry/coordinates.js</span>",
     "function"
   ],
   [
-    "binaural/src/geometry/coordinates.js~sofasphericaltogl",
+    "servesofahrir/src/geometry/coordinates.js~sofasphericaltogl",
     "function/index.html#static-function-sofaSphericalToGl",
-    "<span>sofaSphericalToGl</span> <span class=\"search-result-import-path\">binaural/src/geometry/coordinates.js</span>",
+    "<span>sofaSphericalToGl</span> <span class=\"search-result-import-path\">serveSofaHrir/src/geometry/coordinates.js</span>",
     "function"
   ],
   [
-    "binaural/src/geometry/coordinates.js~sofasphericaltosofacartesian",
+    "servesofahrir/src/geometry/coordinates.js~sofasphericaltosofacartesian",
     "function/index.html#static-function-sofaSphericalToSofaCartesian",
-    "<span>sofaSphericalToSofaCartesian</span> <span class=\"search-result-import-path\">binaural/src/geometry/coordinates.js</span>",
+    "<span>sofaSphericalToSofaCartesian</span> <span class=\"search-result-import-path\">serveSofaHrir/src/geometry/coordinates.js</span>",
     "function"
   ],
   [
-    "binaural/src/geometry/coordinates.js~sofatosofacartesian",
+    "servesofahrir/src/geometry/coordinates.js~sofatosofacartesian",
     "function/index.html#static-function-sofaToSofaCartesian",
-    "<span>sofaToSofaCartesian</span> <span class=\"search-result-import-path\">binaural/src/geometry/coordinates.js</span>",
+    "<span>sofaToSofaCartesian</span> <span class=\"search-result-import-path\">serveSofaHrir/src/geometry/coordinates.js</span>",
     "function"
   ],
   [
-    "binaural/src/geometry/coordinates.js~spat4cartesiantogl",
+    "servesofahrir/src/geometry/coordinates.js~spat4cartesiantogl",
     "function/index.html#static-function-spat4CartesianToGl",
-    "<span>spat4CartesianToGl</span> <span class=\"search-result-import-path\">binaural/src/geometry/coordinates.js</span>",
+    "<span>spat4CartesianToGl</span> <span class=\"search-result-import-path\">serveSofaHrir/src/geometry/coordinates.js</span>",
     "function"
   ],
   [
-    "binaural/src/geometry/coordinates.js~spat4cartesiantospat4spherical",
+    "servesofahrir/src/geometry/coordinates.js~spat4cartesiantospat4spherical",
     "function/index.html#static-function-spat4CartesianToSpat4Spherical",
-    "<span>spat4CartesianToSpat4Spherical</span> <span class=\"search-result-import-path\">binaural/src/geometry/coordinates.js</span>",
+    "<span>spat4CartesianToSpat4Spherical</span> <span class=\"search-result-import-path\">serveSofaHrir/src/geometry/coordinates.js</span>",
     "function"
   ],
   [
-    "binaural/src/geometry/coordinates.js~spat4sphericaltogl",
+    "servesofahrir/src/geometry/coordinates.js~spat4sphericaltogl",
     "function/index.html#static-function-spat4SphericalToGl",
-    "<span>spat4SphericalToGl</span> <span class=\"search-result-import-path\">binaural/src/geometry/coordinates.js</span>",
+    "<span>spat4SphericalToGl</span> <span class=\"search-result-import-path\">serveSofaHrir/src/geometry/coordinates.js</span>",
     "function"
   ],
   [
-    "binaural/src/geometry/coordinates.js~spat4sphericaltospat4cartesian",
+    "servesofahrir/src/geometry/coordinates.js~spat4sphericaltospat4cartesian",
     "function/index.html#static-function-spat4SphericalToSpat4Cartesian",
-    "<span>spat4SphericalToSpat4Cartesian</span> <span class=\"search-result-import-path\">binaural/src/geometry/coordinates.js</span>",
+    "<span>spat4SphericalToSpat4Cartesian</span> <span class=\"search-result-import-path\">serveSofaHrir/src/geometry/coordinates.js</span>",
     "function"
   ],
   [
-    "binaural/src/sofa/parsesofa.js~stringifysofa",
+    "servesofahrir/src/sofa/parsesofa.js~stringifysofa",
     "function/index.html#static-function-stringifySofa",
-    "<span>stringifySofa</span> <span class=\"search-result-import-path\">binaural/src/sofa/parseSofa.js</span>",
+    "<span>stringifySofa</span> <span class=\"search-result-import-path\">serveSofaHrir/src/sofa/parseSofa.js</span>",
     "function"
   ],
   [
-    "binaural/src/geometry/coordinates.js~systemtogl",
+    "servesofahrir/src/geometry/coordinates.js~systemtogl",
     "function/index.html#static-function-systemToGl",
-    "<span>systemToGl</span> <span class=\"search-result-import-path\">binaural/src/geometry/coordinates.js</span>",
+    "<span>systemToGl</span> <span class=\"search-result-import-path\">serveSofaHrir/src/geometry/coordinates.js</span>",
     "function"
   ],
   [
-    "binaural/src/geometry/coordinates.js~systemtype",
+    "servesofahrir/src/geometry/coordinates.js~systemtype",
     "function/index.html#static-function-systemType",
-    "<span>systemType</span> <span class=\"search-result-import-path\">binaural/src/geometry/coordinates.js</span>",
+    "<span>systemType</span> <span class=\"search-result-import-path\">serveSofaHrir/src/geometry/coordinates.js</span>",
     "function"
   ],
   [
-    "binaural/src/geometry/degree.js~toradian",
+    "servesofahrir/src/geometry/degree.js~toradian",
     "function/index.html#static-function-toRadian",
-    "<span>toRadian</span> <span class=\"search-result-import-path\">binaural/src/geometry/degree.js</span>",
+    "<span>toRadian</span> <span class=\"search-result-import-path\">serveSofaHrir/src/geometry/degree.js</span>",
     "function"
   ],
   [
-    "binaural/src/geometry/degree.js~toradianfactor",
+    "servesofahrir/src/geometry/degree.js~toradianfactor",
     "variable/index.html#static-variable-toRadianFactor",
-    "<span>toRadianFactor</span> <span class=\"search-result-import-path\">binaural/src/geometry/degree.js</span>",
+    "<span>toRadianFactor</span> <span class=\"search-result-import-path\">serveSofaHrir/src/geometry/degree.js</span>",
     "variable"
   ],
   [
-    "binaural/src/info.js~version",
+    "servesofahrir/src/info.js~version",
     "variable/index.html#static-variable-version",
-    "<span>version</span> <span class=\"search-result-import-path\">binaural/src/info.js</span>",
+    "<span>version</span> <span class=\"search-result-import-path\">serveSofaHrir/src/info.js</span>",
     "variable"
   ],
   [
@@ -594,288 +558,6 @@ window.esdocSearchIndex = [
     "external"
   ],
   [
-    "src/audio/binauralpanner.js",
-    "file/src/audio/BinauralPanner.js.html",
-    "src/audio/BinauralPanner.js",
-    "file"
-  ],
-  [
-    "src/audio/binauralpanner.js~binauralpanner#connectinputbyindex",
-    "class/src/audio/BinauralPanner.js~BinauralPanner.html#instance-method-connectInputByIndex",
-    "src/audio/BinauralPanner.js~BinauralPanner#connectInputByIndex",
-    "method"
-  ],
-  [
-    "src/audio/binauralpanner.js~binauralpanner#connectoutputbyindex",
-    "class/src/audio/BinauralPanner.js~BinauralPanner.html#instance-method-connectOutputByIndex",
-    "src/audio/BinauralPanner.js~BinauralPanner#connectOutputByIndex",
-    "method"
-  ],
-  [
-    "src/audio/binauralpanner.js~binauralpanner#connectoutputs",
-    "class/src/audio/BinauralPanner.js~BinauralPanner.html#instance-method-connectOutputs",
-    "src/audio/BinauralPanner.js~BinauralPanner#connectOutputs",
-    "method"
-  ],
-  [
-    "src/audio/binauralpanner.js~binauralpanner#constructor",
-    "class/src/audio/BinauralPanner.js~BinauralPanner.html#instance-constructor-constructor",
-    "src/audio/BinauralPanner.js~BinauralPanner#constructor",
-    "method"
-  ],
-  [
-    "src/audio/binauralpanner.js~binauralpanner#coordinatesystem",
-    "class/src/audio/BinauralPanner.js~BinauralPanner.html#instance-get-coordinateSystem",
-    "src/audio/BinauralPanner.js~BinauralPanner#coordinateSystem",
-    "member"
-  ],
-  [
-    "src/audio/binauralpanner.js~binauralpanner#coordinatesystem",
-    "class/src/audio/BinauralPanner.js~BinauralPanner.html#instance-set-coordinateSystem",
-    "src/audio/BinauralPanner.js~BinauralPanner#coordinateSystem",
-    "member"
-  ],
-  [
-    "src/audio/binauralpanner.js~binauralpanner#disconnectinputbyindex",
-    "class/src/audio/BinauralPanner.js~BinauralPanner.html#instance-method-disconnectInputByIndex",
-    "src/audio/BinauralPanner.js~BinauralPanner#disconnectInputByIndex",
-    "method"
-  ],
-  [
-    "src/audio/binauralpanner.js~binauralpanner#disconnectinputs",
-    "class/src/audio/BinauralPanner.js~BinauralPanner.html#instance-method-disconnectInputs",
-    "src/audio/BinauralPanner.js~BinauralPanner#disconnectInputs",
-    "method"
-  ],
-  [
-    "src/audio/binauralpanner.js~binauralpanner#disconnectoutputbyindex",
-    "class/src/audio/BinauralPanner.js~BinauralPanner.html#instance-method-disconnectOutputByIndex",
-    "src/audio/BinauralPanner.js~BinauralPanner#disconnectOutputByIndex",
-    "method"
-  ],
-  [
-    "src/audio/binauralpanner.js~binauralpanner#disconnectoutputs",
-    "class/src/audio/BinauralPanner.js~BinauralPanner.html#instance-method-disconnectOutputs",
-    "src/audio/BinauralPanner.js~BinauralPanner#disconnectOutputs",
-    "method"
-  ],
-  [
-    "src/audio/binauralpanner.js~binauralpanner#filterafterload",
-    "class/src/audio/BinauralPanner.js~BinauralPanner.html#instance-set-filterAfterLoad",
-    "src/audio/BinauralPanner.js~BinauralPanner#filterAfterLoad",
-    "member"
-  ],
-  [
-    "src/audio/binauralpanner.js~binauralpanner#filterafterload",
-    "class/src/audio/BinauralPanner.js~BinauralPanner.html#instance-get-filterAfterLoad",
-    "src/audio/BinauralPanner.js~BinauralPanner#filterAfterLoad",
-    "member"
-  ],
-  [
-    "src/audio/binauralpanner.js~binauralpanner#filtercoordinatesystem",
-    "class/src/audio/BinauralPanner.js~BinauralPanner.html#instance-set-filterCoordinateSystem",
-    "src/audio/BinauralPanner.js~BinauralPanner#filterCoordinateSystem",
-    "member"
-  ],
-  [
-    "src/audio/binauralpanner.js~binauralpanner#filtercoordinatesystem",
-    "class/src/audio/BinauralPanner.js~BinauralPanner.html#instance-get-filterCoordinateSystem",
-    "src/audio/BinauralPanner.js~BinauralPanner#filterCoordinateSystem",
-    "member"
-  ],
-  [
-    "src/audio/binauralpanner.js~binauralpanner#filterpositions",
-    "class/src/audio/BinauralPanner.js~BinauralPanner.html#instance-set-filterPositions",
-    "src/audio/BinauralPanner.js~BinauralPanner#filterPositions",
-    "member"
-  ],
-  [
-    "src/audio/binauralpanner.js~binauralpanner#filterpositions",
-    "class/src/audio/BinauralPanner.js~BinauralPanner.html#instance-get-filterPositions",
-    "src/audio/BinauralPanner.js~BinauralPanner#filterPositions",
-    "member"
-  ],
-  [
-    "src/audio/binauralpanner.js~binauralpanner#getsourcepositionbyindex",
-    "class/src/audio/BinauralPanner.js~BinauralPanner.html#instance-method-getSourcePositionByIndex",
-    "src/audio/BinauralPanner.js~BinauralPanner#getSourcePositionByIndex",
-    "method"
-  ],
-  [
-    "src/audio/binauralpanner.js~binauralpanner#hrtfset",
-    "class/src/audio/BinauralPanner.js~BinauralPanner.html#instance-get-hrtfSet",
-    "src/audio/BinauralPanner.js~BinauralPanner#hrtfSet",
-    "member"
-  ],
-  [
-    "src/audio/binauralpanner.js~binauralpanner#hrtfset",
-    "class/src/audio/BinauralPanner.js~BinauralPanner.html#instance-set-hrtfSet",
-    "src/audio/BinauralPanner.js~BinauralPanner#hrtfSet",
-    "member"
-  ],
-  [
-    "src/audio/binauralpanner.js~binauralpanner#listener",
-    "class/src/audio/BinauralPanner.js~BinauralPanner.html#instance-set-listener",
-    "src/audio/BinauralPanner.js~BinauralPanner#listener",
-    "member"
-  ],
-  [
-    "src/audio/binauralpanner.js~binauralpanner#listenercoordinatesystem",
-    "class/src/audio/BinauralPanner.js~BinauralPanner.html#instance-get-listenerCoordinateSystem",
-    "src/audio/BinauralPanner.js~BinauralPanner#listenerCoordinateSystem",
-    "member"
-  ],
-  [
-    "src/audio/binauralpanner.js~binauralpanner#listenercoordinatesystem",
-    "class/src/audio/BinauralPanner.js~BinauralPanner.html#instance-set-listenerCoordinateSystem",
-    "src/audio/BinauralPanner.js~BinauralPanner#listenerCoordinateSystem",
-    "member"
-  ],
-  [
-    "src/audio/binauralpanner.js~binauralpanner#listenerposition",
-    "class/src/audio/BinauralPanner.js~BinauralPanner.html#instance-get-listenerPosition",
-    "src/audio/BinauralPanner.js~BinauralPanner#listenerPosition",
-    "member"
-  ],
-  [
-    "src/audio/binauralpanner.js~binauralpanner#listenerposition",
-    "class/src/audio/BinauralPanner.js~BinauralPanner.html#instance-set-listenerPosition",
-    "src/audio/BinauralPanner.js~BinauralPanner#listenerPosition",
-    "member"
-  ],
-  [
-    "src/audio/binauralpanner.js~binauralpanner#listenerup",
-    "class/src/audio/BinauralPanner.js~BinauralPanner.html#instance-set-listenerUp",
-    "src/audio/BinauralPanner.js~BinauralPanner#listenerUp",
-    "member"
-  ],
-  [
-    "src/audio/binauralpanner.js~binauralpanner#listenerup",
-    "class/src/audio/BinauralPanner.js~BinauralPanner.html#instance-get-listenerUp",
-    "src/audio/BinauralPanner.js~BinauralPanner#listenerUp",
-    "member"
-  ],
-  [
-    "src/audio/binauralpanner.js~binauralpanner#listenerview",
-    "class/src/audio/BinauralPanner.js~BinauralPanner.html#instance-get-listenerView",
-    "src/audio/BinauralPanner.js~BinauralPanner#listenerView",
-    "member"
-  ],
-  [
-    "src/audio/binauralpanner.js~binauralpanner#listenerview",
-    "class/src/audio/BinauralPanner.js~BinauralPanner.html#instance-set-listenerView",
-    "src/audio/BinauralPanner.js~BinauralPanner#listenerView",
-    "member"
-  ],
-  [
-    "src/audio/binauralpanner.js~binauralpanner#listenerviewisrelative",
-    "class/src/audio/BinauralPanner.js~BinauralPanner.html#instance-set-listenerViewIsRelative",
-    "src/audio/BinauralPanner.js~BinauralPanner#listenerViewIsRelative",
-    "member"
-  ],
-  [
-    "src/audio/binauralpanner.js~binauralpanner#listenerviewisrelative",
-    "class/src/audio/BinauralPanner.js~BinauralPanner.html#instance-get-listenerViewIsRelative",
-    "src/audio/BinauralPanner.js~BinauralPanner#listenerViewIsRelative",
-    "member"
-  ],
-  [
-    "src/audio/binauralpanner.js~binauralpanner#loadhrtfset",
-    "class/src/audio/BinauralPanner.js~BinauralPanner.html#instance-method-loadHrtfSet",
-    "src/audio/BinauralPanner.js~BinauralPanner#loadHrtfSet",
-    "method"
-  ],
-  [
-    "src/audio/binauralpanner.js~binauralpanner#setsourcepositionbyindex",
-    "class/src/audio/BinauralPanner.js~BinauralPanner.html#instance-method-setSourcePositionByIndex",
-    "src/audio/BinauralPanner.js~BinauralPanner#setSourcePositionByIndex",
-    "method"
-  ],
-  [
-    "src/audio/binauralpanner.js~binauralpanner#sourcepositions",
-    "class/src/audio/BinauralPanner.js~BinauralPanner.html#instance-set-sourcePositions",
-    "src/audio/BinauralPanner.js~BinauralPanner#sourcePositions",
-    "member"
-  ],
-  [
-    "src/audio/binauralpanner.js~binauralpanner#sourcepositions",
-    "class/src/audio/BinauralPanner.js~BinauralPanner.html#instance-get-sourcePositions",
-    "src/audio/BinauralPanner.js~BinauralPanner#sourcePositions",
-    "member"
-  ],
-  [
-    "src/audio/binauralpanner.js~binauralpanner#update",
-    "class/src/audio/BinauralPanner.js~BinauralPanner.html#instance-method-update",
-    "src/audio/BinauralPanner.js~BinauralPanner#update",
-    "method"
-  ],
-  [
-    "src/audio/source.js",
-    "file/src/audio/Source.js.html",
-    "src/audio/Source.js",
-    "file"
-  ],
-  [
-    "src/audio/source.js~source#connectinput",
-    "class/src/audio/Source.js~Source.html#instance-method-connectInput",
-    "src/audio/Source.js~Source#connectInput",
-    "method"
-  ],
-  [
-    "src/audio/source.js~source#connectoutput",
-    "class/src/audio/Source.js~Source.html#instance-method-connectOutput",
-    "src/audio/Source.js~Source#connectOutput",
-    "method"
-  ],
-  [
-    "src/audio/source.js~source#constructor",
-    "class/src/audio/Source.js~Source.html#instance-constructor-constructor",
-    "src/audio/Source.js~Source#constructor",
-    "method"
-  ],
-  [
-    "src/audio/source.js~source#crossfadeduration",
-    "class/src/audio/Source.js~Source.html#instance-get-crossfadeDuration",
-    "src/audio/Source.js~Source#crossfadeDuration",
-    "member"
-  ],
-  [
-    "src/audio/source.js~source#crossfadeduration",
-    "class/src/audio/Source.js~Source.html#instance-set-crossfadeDuration",
-    "src/audio/Source.js~Source#crossfadeDuration",
-    "member"
-  ],
-  [
-    "src/audio/source.js~source#disconnectinput",
-    "class/src/audio/Source.js~Source.html#instance-method-disconnectInput",
-    "src/audio/Source.js~Source#disconnectInput",
-    "method"
-  ],
-  [
-    "src/audio/source.js~source#disconnectoutput",
-    "class/src/audio/Source.js~Source.html#instance-method-disconnectOutput",
-    "src/audio/Source.js~Source#disconnectOutput",
-    "method"
-  ],
-  [
-    "src/audio/source.js~source#hrtfset",
-    "class/src/audio/Source.js~Source.html#instance-get-hrtfSet",
-    "src/audio/Source.js~Source#hrtfSet",
-    "member"
-  ],
-  [
-    "src/audio/source.js~source#hrtfset",
-    "class/src/audio/Source.js~Source.html#instance-set-hrtfSet",
-    "src/audio/Source.js~Source#hrtfSet",
-    "member"
-  ],
-  [
-    "src/audio/source.js~source#position",
-    "class/src/audio/Source.js~Source.html#instance-set-position",
-    "src/audio/Source.js~Source#position",
-    "member"
-  ],
-  [
     "src/audio/index.js",
     "file/src/audio/index.js.html",
     "src/audio/index.js",
@@ -904,90 +586,6 @@ window.esdocSearchIndex = [
     "file/src/geometry/KdTree.js.html",
     "src/geometry/KdTree.js",
     "file"
-  ],
-  [
-    "src/geometry/listener.js",
-    "file/src/geometry/Listener.js.html",
-    "src/geometry/Listener.js",
-    "file"
-  ],
-  [
-    "src/geometry/listener.js~listener#constructor",
-    "class/src/geometry/Listener.js~Listener.html#instance-constructor-constructor",
-    "src/geometry/Listener.js~Listener#constructor",
-    "method"
-  ],
-  [
-    "src/geometry/listener.js~listener#coordinatesystem",
-    "class/src/geometry/Listener.js~Listener.html#instance-set-coordinateSystem",
-    "src/geometry/Listener.js~Listener#coordinateSystem",
-    "member"
-  ],
-  [
-    "src/geometry/listener.js~listener#coordinatesystem",
-    "class/src/geometry/Listener.js~Listener.html#instance-get-coordinateSystem",
-    "src/geometry/Listener.js~Listener#coordinateSystem",
-    "member"
-  ],
-  [
-    "src/geometry/listener.js~listener#lookat",
-    "class/src/geometry/Listener.js~Listener.html#instance-get-lookAt",
-    "src/geometry/Listener.js~Listener#lookAt",
-    "member"
-  ],
-  [
-    "src/geometry/listener.js~listener#position",
-    "class/src/geometry/Listener.js~Listener.html#instance-set-position",
-    "src/geometry/Listener.js~Listener#position",
-    "member"
-  ],
-  [
-    "src/geometry/listener.js~listener#position",
-    "class/src/geometry/Listener.js~Listener.html#instance-get-position",
-    "src/geometry/Listener.js~Listener#position",
-    "member"
-  ],
-  [
-    "src/geometry/listener.js~listener#up",
-    "class/src/geometry/Listener.js~Listener.html#instance-get-up",
-    "src/geometry/Listener.js~Listener#up",
-    "member"
-  ],
-  [
-    "src/geometry/listener.js~listener#up",
-    "class/src/geometry/Listener.js~Listener.html#instance-set-up",
-    "src/geometry/Listener.js~Listener#up",
-    "member"
-  ],
-  [
-    "src/geometry/listener.js~listener#update",
-    "class/src/geometry/Listener.js~Listener.html#instance-method-update",
-    "src/geometry/Listener.js~Listener#update",
-    "method"
-  ],
-  [
-    "src/geometry/listener.js~listener#view",
-    "class/src/geometry/Listener.js~Listener.html#instance-set-view",
-    "src/geometry/Listener.js~Listener#view",
-    "member"
-  ],
-  [
-    "src/geometry/listener.js~listener#view",
-    "class/src/geometry/Listener.js~Listener.html#instance-get-view",
-    "src/geometry/Listener.js~Listener#view",
-    "member"
-  ],
-  [
-    "src/geometry/listener.js~listener#viewisrelative",
-    "class/src/geometry/Listener.js~Listener.html#instance-get-viewIsRelative",
-    "src/geometry/Listener.js~Listener#viewIsRelative",
-    "member"
-  ],
-  [
-    "src/geometry/listener.js~listener#viewisrelative",
-    "class/src/geometry/Listener.js~Listener.html#instance-set-viewIsRelative",
-    "src/geometry/Listener.js~Listener#viewIsRelative",
-    "member"
   ],
   [
     "src/geometry/coordinates.js",
@@ -1105,25 +703,25 @@ window.esdocSearchIndex = [
   ],
   [
     "src/sofa/hrtfset.js~hrtfset#filtercoordinatesystem",
-    "class/src/sofa/HrtfSet.js~HrtfSet.html#instance-set-filterCoordinateSystem",
-    "src/sofa/HrtfSet.js~HrtfSet#filterCoordinateSystem",
-    "member"
-  ],
-  [
-    "src/sofa/hrtfset.js~hrtfset#filtercoordinatesystem",
     "class/src/sofa/HrtfSet.js~HrtfSet.html#instance-get-filterCoordinateSystem",
     "src/sofa/HrtfSet.js~HrtfSet#filterCoordinateSystem",
     "member"
   ],
   [
-    "src/sofa/hrtfset.js~hrtfset#filterpositions",
-    "class/src/sofa/HrtfSet.js~HrtfSet.html#instance-set-filterPositions",
-    "src/sofa/HrtfSet.js~HrtfSet#filterPositions",
+    "src/sofa/hrtfset.js~hrtfset#filtercoordinatesystem",
+    "class/src/sofa/HrtfSet.js~HrtfSet.html#instance-set-filterCoordinateSystem",
+    "src/sofa/HrtfSet.js~HrtfSet#filterCoordinateSystem",
     "member"
   ],
   [
     "src/sofa/hrtfset.js~hrtfset#filterpositions",
     "class/src/sofa/HrtfSet.js~HrtfSet.html#instance-get-filterPositions",
+    "src/sofa/HrtfSet.js~HrtfSet#filterPositions",
+    "member"
+  ],
+  [
+    "src/sofa/hrtfset.js~hrtfset#filterpositions",
+    "class/src/sofa/HrtfSet.js~HrtfSet.html#instance-set-filterPositions",
     "src/sofa/HrtfSet.js~HrtfSet#filterPositions",
     "member"
   ],
