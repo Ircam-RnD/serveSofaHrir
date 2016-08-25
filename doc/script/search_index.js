@@ -1,230 +1,230 @@
 window.esdocSearchIndex = [
   [
-    "servesofahrir/src/sofa/hrtfset.js~hrtfset",
+    "serve-sofa-hrir/src/sofa/hrtfset.js~hrtfset",
     "class/src/sofa/HrtfSet.js~HrtfSet.html",
-    "<span>HrtfSet</span> <span class=\"search-result-import-path\">serveSofaHrir/src/sofa/HrtfSet.js</span>",
+    "<span>HrtfSet</span> <span class=\"search-result-import-path\">serve-sofa-hrir/src/sofa/HrtfSet.js</span>",
     "class"
   ],
   [
-    "servesofahrir/src/sofa/serverdatabase.js~serverdatabase",
+    "serve-sofa-hrir/src/sofa/serverdatabase.js~serverdatabase",
     "class/src/sofa/ServerDataBase.js~ServerDataBase.html",
-    "<span>ServerDataBase</span> <span class=\"search-result-import-path\">serveSofaHrir/src/sofa/ServerDataBase.js</span>",
+    "<span>ServerDataBase</span> <span class=\"search-result-import-path\">serve-sofa-hrir/src/sofa/ServerDataBase.js</span>",
     "class"
   ],
   [
-    "servesofahrir/src/common/utilities.js~almostequals",
+    "serve-sofa-hrir/src/common/utilities.js~almostequals",
     "function/index.html#static-function-almostEquals",
-    "<span>almostEquals</span> <span class=\"search-result-import-path\">serveSofaHrir/src/common/utilities.js</span>",
+    "<span>almostEquals</span> <span class=\"search-result-import-path\">serve-sofa-hrir/src/common/utilities.js</span>",
     "function"
   ],
   [
-    "servesofahrir/src/common/utilities.js~almostequalsmodulo",
+    "serve-sofa-hrir/src/common/utilities.js~almostequalsmodulo",
     "function/index.html#static-function-almostEqualsModulo",
-    "<span>almostEqualsModulo</span> <span class=\"search-result-import-path\">serveSofaHrir/src/common/utilities.js</span>",
+    "<span>almostEqualsModulo</span> <span class=\"search-result-import-path\">serve-sofa-hrir/src/common/utilities.js</span>",
     "function"
   ],
   [
-    "servesofahrir/src/geometry/degree.js~atan2",
+    "serve-sofa-hrir/src/geometry/degree.js~atan2",
     "function/index.html#static-function-atan2",
-    "<span>atan2</span> <span class=\"search-result-import-path\">serveSofaHrir/src/geometry/degree.js</span>",
+    "<span>atan2</span> <span class=\"search-result-import-path\">serve-sofa-hrir/src/geometry/degree.js</span>",
     "function"
   ],
   [
-    "servesofahrir/src/sofa/parsesofa.js~conformsofacoordinatesystem",
+    "serve-sofa-hrir/src/sofa/parsesofa.js~conformsofacoordinatesystem",
     "function/index.html#static-function-conformSofaCoordinateSystem",
-    "<span>conformSofaCoordinateSystem</span> <span class=\"search-result-import-path\">serveSofaHrir/src/sofa/parseSofa.js</span>",
+    "<span>conformSofaCoordinateSystem</span> <span class=\"search-result-import-path\">serve-sofa-hrir/src/sofa/parseSofa.js</span>",
     "function"
   ],
   [
-    "servesofahrir/src/geometry/degree.js~cos",
+    "serve-sofa-hrir/src/geometry/degree.js~cos",
     "function/index.html#static-function-cos",
-    "<span>cos</span> <span class=\"search-result-import-path\">serveSofaHrir/src/geometry/degree.js</span>",
+    "<span>cos</span> <span class=\"search-result-import-path\">serve-sofa-hrir/src/geometry/degree.js</span>",
     "function"
   ],
   [
-    "servesofahrir/src/info.js~description",
+    "serve-sofa-hrir/src/info.js~description",
     "variable/index.html#static-variable-description",
-    "<span>description</span> <span class=\"search-result-import-path\">serveSofaHrir/src/info.js</span>",
+    "<span>description</span> <span class=\"search-result-import-path\">serve-sofa-hrir/src/info.js</span>",
     "variable"
   ],
   [
-    "servesofahrir/src/geometry/kdtree.js~distance",
+    "serve-sofa-hrir/src/geometry/kdtree.js~distance",
     "function/index.html#static-function-distance",
-    "<span>distance</span> <span class=\"search-result-import-path\">serveSofaHrir/src/geometry/KdTree.js</span>",
+    "<span>distance</span> <span class=\"search-result-import-path\">serve-sofa-hrir/src/geometry/KdTree.js</span>",
     "function"
   ],
   [
-    "servesofahrir/src/geometry/kdtree.js~distancesquared",
+    "serve-sofa-hrir/src/geometry/kdtree.js~distancesquared",
     "function/index.html#static-function-distanceSquared",
-    "<span>distanceSquared</span> <span class=\"search-result-import-path\">serveSofaHrir/src/geometry/KdTree.js</span>",
+    "<span>distanceSquared</span> <span class=\"search-result-import-path\">serve-sofa-hrir/src/geometry/KdTree.js</span>",
     "function"
   ],
   [
-    "servesofahrir/src/geometry/degree.js~fromradian",
+    "serve-sofa-hrir/src/geometry/degree.js~fromradian",
     "function/index.html#static-function-fromRadian",
-    "<span>fromRadian</span> <span class=\"search-result-import-path\">serveSofaHrir/src/geometry/degree.js</span>",
+    "<span>fromRadian</span> <span class=\"search-result-import-path\">serve-sofa-hrir/src/geometry/degree.js</span>",
     "function"
   ],
   [
-    "servesofahrir/src/geometry/degree.js~fromradianfactor",
+    "serve-sofa-hrir/src/geometry/degree.js~fromradianfactor",
     "variable/index.html#static-variable-fromRadianFactor",
-    "<span>fromRadianFactor</span> <span class=\"search-result-import-path\">serveSofaHrir/src/geometry/degree.js</span>",
+    "<span>fromRadianFactor</span> <span class=\"search-result-import-path\">serve-sofa-hrir/src/geometry/degree.js</span>",
     "variable"
   ],
   [
-    "servesofahrir/src/geometry/coordinates.js~gltosofacartesian",
+    "serve-sofa-hrir/src/geometry/coordinates.js~gltosofacartesian",
     "function/index.html#static-function-glToSofaCartesian",
-    "<span>glToSofaCartesian</span> <span class=\"search-result-import-path\">serveSofaHrir/src/geometry/coordinates.js</span>",
+    "<span>glToSofaCartesian</span> <span class=\"search-result-import-path\">serve-sofa-hrir/src/geometry/coordinates.js</span>",
     "function"
   ],
   [
-    "servesofahrir/src/geometry/coordinates.js~gltosofaspherical",
+    "serve-sofa-hrir/src/geometry/coordinates.js~gltosofaspherical",
     "function/index.html#static-function-glToSofaSpherical",
-    "<span>glToSofaSpherical</span> <span class=\"search-result-import-path\">serveSofaHrir/src/geometry/coordinates.js</span>",
+    "<span>glToSofaSpherical</span> <span class=\"search-result-import-path\">serve-sofa-hrir/src/geometry/coordinates.js</span>",
     "function"
   ],
   [
-    "servesofahrir/src/geometry/coordinates.js~gltospat4cartesian",
+    "serve-sofa-hrir/src/geometry/coordinates.js~gltospat4cartesian",
     "function/index.html#static-function-glToSpat4Cartesian",
-    "<span>glToSpat4Cartesian</span> <span class=\"search-result-import-path\">serveSofaHrir/src/geometry/coordinates.js</span>",
+    "<span>glToSpat4Cartesian</span> <span class=\"search-result-import-path\">serve-sofa-hrir/src/geometry/coordinates.js</span>",
     "function"
   ],
   [
-    "servesofahrir/src/geometry/coordinates.js~gltospat4spherical",
+    "serve-sofa-hrir/src/geometry/coordinates.js~gltospat4spherical",
     "function/index.html#static-function-glToSpat4Spherical",
-    "<span>glToSpat4Spherical</span> <span class=\"search-result-import-path\">serveSofaHrir/src/geometry/coordinates.js</span>",
+    "<span>glToSpat4Spherical</span> <span class=\"search-result-import-path\">serve-sofa-hrir/src/geometry/coordinates.js</span>",
     "function"
   ],
   [
-    "servesofahrir/src/geometry/coordinates.js~gltosystem",
+    "serve-sofa-hrir/src/geometry/coordinates.js~gltosystem",
     "function/index.html#static-function-glToSystem",
-    "<span>glToSystem</span> <span class=\"search-result-import-path\">serveSofaHrir/src/geometry/coordinates.js</span>",
+    "<span>glToSystem</span> <span class=\"search-result-import-path\">serve-sofa-hrir/src/geometry/coordinates.js</span>",
     "function"
   ],
   [
-    "servesofahrir/src/info.js~license",
+    "serve-sofa-hrir/src/info.js~license",
     "variable/index.html#static-variable-license",
-    "<span>license</span> <span class=\"search-result-import-path\">serveSofaHrir/src/info.js</span>",
+    "<span>license</span> <span class=\"search-result-import-path\">serve-sofa-hrir/src/info.js</span>",
     "variable"
   ],
   [
-    "servesofahrir/src/info.js~name",
+    "serve-sofa-hrir/src/info.js~name",
     "variable/index.html#static-variable-name",
-    "<span>name</span> <span class=\"search-result-import-path\">serveSofaHrir/src/info.js</span>",
+    "<span>name</span> <span class=\"search-result-import-path\">serve-sofa-hrir/src/info.js</span>",
     "variable"
   ],
   [
-    "servesofahrir/src/sofa/parsedataset.js~parsedataset",
+    "serve-sofa-hrir/src/sofa/parsedataset.js~parsedataset",
     "function/index.html#static-function-parseDataSet",
-    "<span>parseDataSet</span> <span class=\"search-result-import-path\">serveSofaHrir/src/sofa/parseDataSet.js</span>",
+    "<span>parseDataSet</span> <span class=\"search-result-import-path\">serve-sofa-hrir/src/sofa/parseDataSet.js</span>",
     "function"
   ],
   [
-    "servesofahrir/src/sofa/parsesofa.js~parsesofa",
+    "serve-sofa-hrir/src/sofa/parsesofa.js~parsesofa",
     "function/index.html#static-function-parseSofa",
-    "<span>parseSofa</span> <span class=\"search-result-import-path\">serveSofaHrir/src/sofa/parseSofa.js</span>",
+    "<span>parseSofa</span> <span class=\"search-result-import-path\">serve-sofa-hrir/src/sofa/parseSofa.js</span>",
     "function"
   ],
   [
-    "servesofahrir/src/audio/utilities.js~resamplefloat32array",
+    "serve-sofa-hrir/src/audio/utilities.js~resamplefloat32array",
     "function/index.html#static-function-resampleFloat32Array",
-    "<span>resampleFloat32Array</span> <span class=\"search-result-import-path\">serveSofaHrir/src/audio/utilities.js</span>",
+    "<span>resampleFloat32Array</span> <span class=\"search-result-import-path\">serve-sofa-hrir/src/audio/utilities.js</span>",
     "function"
   ],
   [
-    "servesofahrir/src/geometry/degree.js~sin",
+    "serve-sofa-hrir/src/geometry/degree.js~sin",
     "function/index.html#static-function-sin",
-    "<span>sin</span> <span class=\"search-result-import-path\">serveSofaHrir/src/geometry/degree.js</span>",
+    "<span>sin</span> <span class=\"search-result-import-path\">serve-sofa-hrir/src/geometry/degree.js</span>",
     "function"
   ],
   [
-    "servesofahrir/src/geometry/coordinates.js~sofacartesiantogl",
+    "serve-sofa-hrir/src/geometry/coordinates.js~sofacartesiantogl",
     "function/index.html#static-function-sofaCartesianToGl",
-    "<span>sofaCartesianToGl</span> <span class=\"search-result-import-path\">serveSofaHrir/src/geometry/coordinates.js</span>",
+    "<span>sofaCartesianToGl</span> <span class=\"search-result-import-path\">serve-sofa-hrir/src/geometry/coordinates.js</span>",
     "function"
   ],
   [
-    "servesofahrir/src/geometry/coordinates.js~sofacartesiantosofaspherical",
+    "serve-sofa-hrir/src/geometry/coordinates.js~sofacartesiantosofaspherical",
     "function/index.html#static-function-sofaCartesianToSofaSpherical",
-    "<span>sofaCartesianToSofaSpherical</span> <span class=\"search-result-import-path\">serveSofaHrir/src/geometry/coordinates.js</span>",
+    "<span>sofaCartesianToSofaSpherical</span> <span class=\"search-result-import-path\">serve-sofa-hrir/src/geometry/coordinates.js</span>",
     "function"
   ],
   [
-    "servesofahrir/src/geometry/coordinates.js~sofasphericaltogl",
+    "serve-sofa-hrir/src/geometry/coordinates.js~sofasphericaltogl",
     "function/index.html#static-function-sofaSphericalToGl",
-    "<span>sofaSphericalToGl</span> <span class=\"search-result-import-path\">serveSofaHrir/src/geometry/coordinates.js</span>",
+    "<span>sofaSphericalToGl</span> <span class=\"search-result-import-path\">serve-sofa-hrir/src/geometry/coordinates.js</span>",
     "function"
   ],
   [
-    "servesofahrir/src/geometry/coordinates.js~sofasphericaltosofacartesian",
+    "serve-sofa-hrir/src/geometry/coordinates.js~sofasphericaltosofacartesian",
     "function/index.html#static-function-sofaSphericalToSofaCartesian",
-    "<span>sofaSphericalToSofaCartesian</span> <span class=\"search-result-import-path\">serveSofaHrir/src/geometry/coordinates.js</span>",
+    "<span>sofaSphericalToSofaCartesian</span> <span class=\"search-result-import-path\">serve-sofa-hrir/src/geometry/coordinates.js</span>",
     "function"
   ],
   [
-    "servesofahrir/src/geometry/coordinates.js~sofatosofacartesian",
+    "serve-sofa-hrir/src/geometry/coordinates.js~sofatosofacartesian",
     "function/index.html#static-function-sofaToSofaCartesian",
-    "<span>sofaToSofaCartesian</span> <span class=\"search-result-import-path\">serveSofaHrir/src/geometry/coordinates.js</span>",
+    "<span>sofaToSofaCartesian</span> <span class=\"search-result-import-path\">serve-sofa-hrir/src/geometry/coordinates.js</span>",
     "function"
   ],
   [
-    "servesofahrir/src/geometry/coordinates.js~spat4cartesiantogl",
+    "serve-sofa-hrir/src/geometry/coordinates.js~spat4cartesiantogl",
     "function/index.html#static-function-spat4CartesianToGl",
-    "<span>spat4CartesianToGl</span> <span class=\"search-result-import-path\">serveSofaHrir/src/geometry/coordinates.js</span>",
+    "<span>spat4CartesianToGl</span> <span class=\"search-result-import-path\">serve-sofa-hrir/src/geometry/coordinates.js</span>",
     "function"
   ],
   [
-    "servesofahrir/src/geometry/coordinates.js~spat4cartesiantospat4spherical",
+    "serve-sofa-hrir/src/geometry/coordinates.js~spat4cartesiantospat4spherical",
     "function/index.html#static-function-spat4CartesianToSpat4Spherical",
-    "<span>spat4CartesianToSpat4Spherical</span> <span class=\"search-result-import-path\">serveSofaHrir/src/geometry/coordinates.js</span>",
+    "<span>spat4CartesianToSpat4Spherical</span> <span class=\"search-result-import-path\">serve-sofa-hrir/src/geometry/coordinates.js</span>",
     "function"
   ],
   [
-    "servesofahrir/src/geometry/coordinates.js~spat4sphericaltogl",
+    "serve-sofa-hrir/src/geometry/coordinates.js~spat4sphericaltogl",
     "function/index.html#static-function-spat4SphericalToGl",
-    "<span>spat4SphericalToGl</span> <span class=\"search-result-import-path\">serveSofaHrir/src/geometry/coordinates.js</span>",
+    "<span>spat4SphericalToGl</span> <span class=\"search-result-import-path\">serve-sofa-hrir/src/geometry/coordinates.js</span>",
     "function"
   ],
   [
-    "servesofahrir/src/geometry/coordinates.js~spat4sphericaltospat4cartesian",
+    "serve-sofa-hrir/src/geometry/coordinates.js~spat4sphericaltospat4cartesian",
     "function/index.html#static-function-spat4SphericalToSpat4Cartesian",
-    "<span>spat4SphericalToSpat4Cartesian</span> <span class=\"search-result-import-path\">serveSofaHrir/src/geometry/coordinates.js</span>",
+    "<span>spat4SphericalToSpat4Cartesian</span> <span class=\"search-result-import-path\">serve-sofa-hrir/src/geometry/coordinates.js</span>",
     "function"
   ],
   [
-    "servesofahrir/src/sofa/parsesofa.js~stringifysofa",
+    "serve-sofa-hrir/src/sofa/parsesofa.js~stringifysofa",
     "function/index.html#static-function-stringifySofa",
-    "<span>stringifySofa</span> <span class=\"search-result-import-path\">serveSofaHrir/src/sofa/parseSofa.js</span>",
+    "<span>stringifySofa</span> <span class=\"search-result-import-path\">serve-sofa-hrir/src/sofa/parseSofa.js</span>",
     "function"
   ],
   [
-    "servesofahrir/src/geometry/coordinates.js~systemtogl",
+    "serve-sofa-hrir/src/geometry/coordinates.js~systemtogl",
     "function/index.html#static-function-systemToGl",
-    "<span>systemToGl</span> <span class=\"search-result-import-path\">serveSofaHrir/src/geometry/coordinates.js</span>",
+    "<span>systemToGl</span> <span class=\"search-result-import-path\">serve-sofa-hrir/src/geometry/coordinates.js</span>",
     "function"
   ],
   [
-    "servesofahrir/src/geometry/coordinates.js~systemtype",
+    "serve-sofa-hrir/src/geometry/coordinates.js~systemtype",
     "function/index.html#static-function-systemType",
-    "<span>systemType</span> <span class=\"search-result-import-path\">serveSofaHrir/src/geometry/coordinates.js</span>",
+    "<span>systemType</span> <span class=\"search-result-import-path\">serve-sofa-hrir/src/geometry/coordinates.js</span>",
     "function"
   ],
   [
-    "servesofahrir/src/geometry/degree.js~toradian",
+    "serve-sofa-hrir/src/geometry/degree.js~toradian",
     "function/index.html#static-function-toRadian",
-    "<span>toRadian</span> <span class=\"search-result-import-path\">serveSofaHrir/src/geometry/degree.js</span>",
+    "<span>toRadian</span> <span class=\"search-result-import-path\">serve-sofa-hrir/src/geometry/degree.js</span>",
     "function"
   ],
   [
-    "servesofahrir/src/geometry/degree.js~toradianfactor",
+    "serve-sofa-hrir/src/geometry/degree.js~toradianfactor",
     "variable/index.html#static-variable-toRadianFactor",
-    "<span>toRadianFactor</span> <span class=\"search-result-import-path\">serveSofaHrir/src/geometry/degree.js</span>",
+    "<span>toRadianFactor</span> <span class=\"search-result-import-path\">serve-sofa-hrir/src/geometry/degree.js</span>",
     "variable"
   ],
   [
-    "servesofahrir/src/info.js~version",
+    "serve-sofa-hrir/src/info.js~version",
     "variable/index.html#static-variable-version",
-    "<span>version</span> <span class=\"search-result-import-path\">serveSofaHrir/src/info.js</span>",
+    "<span>version</span> <span class=\"search-result-import-path\">serve-sofa-hrir/src/info.js</span>",
     "variable"
   ],
   [

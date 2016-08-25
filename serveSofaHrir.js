@@ -6945,7 +6945,7 @@ module.exports = {
 
 },{}],12:[function(require,module,exports){
 module.exports={
-  "name": "serveSofaHrir",
+  "name": "serve-sofa-hrir",
   "exports": "serveSofaHrir",
   "version": "0.4.1",
   "description": "Utility to fetch and shape sofa formated HRIR from server",

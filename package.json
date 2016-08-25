@@ -1,7 +1,7 @@
 {
-  "name": "serveSofaHrir",
+  "name": "serve-sofa-hrir",
   "exports": "serveSofaHrir",
-  "version": "0.4.1",
+  "version": "0.4.2",
   "description": "Utility to fetch and shape sofa formated HRIR from server",
   "main": "./dist/",
   "standalone": "serveSofaHrir",
