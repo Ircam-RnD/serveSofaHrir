@@ -1,4 +1,280 @@
 (function(f){if(typeof exports==="object"&&typeof module!=="undefined"){module.exports=f()}else if(typeof define==="function"&&define.amd){define([],f)}else{var g;if(typeof window!=="undefined"){g=window}else if(typeof global!=="undefined"){g=global}else if(typeof self!=="undefined"){g=self}else{g=this}g.serveSofaHrir = f()}})(function(){var define,module,exports;return (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
+module.exports = { "default": require("core-js/library/fn/object/define-property"), __esModule: true };
+},{"core-js/library/fn/object/define-property":4}],2:[function(require,module,exports){
+"use strict";
+
+exports["default"] = function (instance, Constructor) {
+  if (!(instance instanceof Constructor)) {
+    throw new TypeError("Cannot call a class as a function");
+  }
+};
+
+exports.__esModule = true;
+},{}],3:[function(require,module,exports){
+"use strict";
+
+var _Object$defineProperty = require("babel-runtime/core-js/object/define-property")["default"];
+
+exports["default"] = (function () {
+  function defineProperties(target, props) {
+    for (var i = 0; i < props.length; i++) {
+      var descriptor = props[i];
+      descriptor.enumerable = descriptor.enumerable || false;
+      descriptor.configurable = true;
+      if ("value" in descriptor) descriptor.writable = true;
+
+      _Object$defineProperty(target, descriptor.key, descriptor);
+    }
+  }
+
+  return function (Constructor, protoProps, staticProps) {
+    if (protoProps) defineProperties(Constructor.prototype, protoProps);
+    if (staticProps) defineProperties(Constructor, staticProps);
+    return Constructor;
+  };
+})();
+
+exports.__esModule = true;
+},{"babel-runtime/core-js/object/define-property":1}],4:[function(require,module,exports){
+var $ = require('../../modules/$');
+module.exports = function defineProperty(it, key, desc){
+  return $.setDesc(it, key, desc);
+};
+},{"../../modules/$":5}],5:[function(require,module,exports){
+var $Object = Object;
+module.exports = {
+  create:     $Object.create,
+  getProto:   $Object.getPrototypeOf,
+  isEnum:     {}.propertyIsEnumerable,
+  getDesc:    $Object.getOwnPropertyDescriptor,
+  setDesc:    $Object.defineProperty,
+  setDescs:   $Object.defineProperties,
+  getKeys:    $Object.keys,
+  getNames:   $Object.getOwnPropertyNames,
+  getSymbols: $Object.getOwnPropertySymbols,
+  each:       [].forEach
+};
+},{}],6:[function(require,module,exports){
+/**
+ * @fileoverview Fractional delay library
+ * @author Arnau Julià <Arnau.Julia@gmail.com>
+ * @version 0.1.0
+ */
+/**
+ * @class FractionalDelay
+ * @public
+ */
+"use strict";
+
+var _createClass = require("babel-runtime/helpers/create-class")["default"];
+
+var _classCallCheck = require("babel-runtime/helpers/class-call-check")["default"];
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var FractionalDelay = (function () {
+    /**
+     * Mandatory initialization method.
+     * @public
+     * @param units:Hz sampleRate Sample Rate the apparatus operates on.
+     * @param type:Float units:s min:0.0 default:1 optMaxDelayTime The maximum delay time.
+     * @chainable
+     */
+
+    function FractionalDelay(sampleRate, optMaxDelayTime) {
+        _classCallCheck(this, FractionalDelay);
+
+        // Properties with default values
+        this.delayTime = 0;
+        this.posRead = 0;
+        this.posWrite = 0;
+        this.fracXi1 = 0;
+        this.fracYi1 = 0;
+        this.intDelay = 0;
+        this.fracDelay = 0;
+
+        // Other properties
+        this.a1 = undefined;
+
+        // Save sample rate
+        this.sampleRate = sampleRate;
+        this.maxDelayTime = optMaxDelayTime || 1;
+
+        this.bufferSize = this.maxDelayTime * this.sampleRate;
+        // Check if the bufferSize is not an integer
+        if (this.bufferSize % 1 !== 0) {
+            this.bufferSize = parseInt(this.bufferSize) + 1;
+        }
+        // Create the internal buffer
+        this.buffer = new Float32Array(this.bufferSize);
+    }
+
+    /**
+     * Set delay value
+     * @param delayTime Delay time
+     * @public
+     */
+
+    _createClass(FractionalDelay, [{
+        key: "setDelay",
+        value: function setDelay(delayTime) {
+            if (delayTime < this.maxDelayTime) {
+                // Save delay value
+                this.delayTime = delayTime;
+                // Transform time in samples
+                var samplesDelay = delayTime * this.sampleRate;
+                // Get the integer part of samplesDelay
+                this.intDelay = parseInt(samplesDelay);
+                // Get the fractional part of samplesDelay
+                this.fracDelay = samplesDelay - this.intDelay;
+                // Update the value of the pointer
+                this.resample();
+                // If the delay has fractional part, update the Thiran Coefficients
+                if (this.fracDelay !== 0) {
+                    this.updateThiranCoefficient();
+                }
+            } else {
+                throw new Error("delayTime > maxDelayTime");
+            }
+        }
+
+        /**
+         * Update delay value
+         * @public
+         */
+    }, {
+        key: "getDelay",
+        value: function getDelay() {
+            return this.delayTime;
+        }
+
+        /**
+         * Process method, where the output is calculated.
+         * @param inputBuffer Input Array
+         * @public
+         */
+    }, {
+        key: "process",
+        value: function process(inputBuffer) {
+            // Creates the outputBuffer, with the same length of the input
+            var outputBuffer = new Float32Array(inputBuffer.length);
+
+            // Integer delay process section
+            for (var i = 0; i < inputBuffer.length; i = i + 1) {
+                // Save the input value in the buffer
+                this.buffer[this.posWrite] = inputBuffer[i];
+                // Write the outputBuffer with the [inputValue - delay] sample
+                outputBuffer[i] = this.buffer[this.posRead];
+                // Update the value of posRead and posWrite pointers
+                this.updatePointers();
+            }
+            // No fractional delay
+            if (this.fracDelay === 0) {
+                return outputBuffer;
+            } else {
+                // The fractional delay process section
+                outputBuffer = new Float32Array(this.fractionalThiranProcess(outputBuffer));
+                return outputBuffer;
+            }
+        }
+
+        /**
+         * Update the value of posRead and posWrite pointers inside the circular buffer
+         * @private
+         */
+    }, {
+        key: "updatePointers",
+        value: function updatePointers() {
+            // It's a circular buffer, so, when it is at the last position, the pointer return to the first position
+
+            // Update posWrite pointer
+            if (this.posWrite === this.buffer.length - 1) {
+                this.posWrite = 0;
+            } else {
+                this.posWrite = this.posWrite + 1;
+            }
+
+            // Update posRead pointer
+            if (this.posRead === this.buffer.length - 1) {
+                this.posRead = 0;
+            } else {
+                this.posRead = this.posRead + 1;
+            }
+        }
+
+        /**
+         * Update Thiran coefficient (1st order Thiran)
+         * @private
+         */
+    }, {
+        key: "updateThiranCoefficient",
+        value: function updateThiranCoefficient() {
+            // Update the coefficient: (1-D)/(1+D) where D is fractional delay
+            this.a1 = (1 - this.fracDelay) / (1 + this.fracDelay);
+        }
+
+        /**
+         * Update the pointer posRead value when the delay value is changed
+         * @private
+         */
+    }, {
+        key: "resample",
+        value: function resample() {
+            if (this.posWrite - this.intDelay < 0) {
+                var pos = this.intDelay - this.posWrite;
+                this.posRead = this.buffer.length - pos;
+            } else {
+                this.posRead = this.posWrite - this.intDelay;
+            }
+        }
+
+        /**
+         * Fractional process method.
+         * @private
+         * @param inputBuffer Input Array
+         */
+    }, {
+        key: "fractionalThiranProcess",
+        value: function fractionalThiranProcess(inputBuffer) {
+            var outputBuffer = new Float32Array(inputBuffer.length);
+
+            var x, y;
+            var xi1 = this.fracXi1;
+            var yi1 = this.fracYi1;
+
+            for (var i = 0; i < inputBuffer.length; i = i + 1) {
+                // Current input sample
+                x = inputBuffer[i];
+
+                // Calculate the output
+                y = this.a1 * x + xi1 - this.a1 * yi1;
+
+                // Update the memories
+                xi1 = x;
+                yi1 = y;
+                // Save the outputBuffer
+                outputBuffer[i] = y;
+            }
+            // Save memories
+            this.fracXi1 = xi1;
+            this.fracYi1 = yi1;
+
+            return outputBuffer;
+        }
+    }]);
+
+    return FractionalDelay;
+})();
+
+exports["default"] = FractionalDelay;
+module.exports = exports["default"];
+
+},{"babel-runtime/helpers/class-call-check":2,"babel-runtime/helpers/create-class":3}],7:[function(require,module,exports){
+module.exports = require('./dist/fractional-delay');
+
+},{"./dist/fractional-delay":6}],8:[function(require,module,exports){
 /**
  * @fileoverview gl-matrix - High performance matrix and vector operations
  * @author Brandon Jones
@@ -36,7 +312,7 @@ exports.quat = require("./gl-matrix/quat.js");
 exports.vec2 = require("./gl-matrix/vec2.js");
 exports.vec3 = require("./gl-matrix/vec3.js");
 exports.vec4 = require("./gl-matrix/vec4.js");
-},{"./gl-matrix/common.js":2,"./gl-matrix/mat2.js":3,"./gl-matrix/mat2d.js":4,"./gl-matrix/mat3.js":5,"./gl-matrix/mat4.js":6,"./gl-matrix/quat.js":7,"./gl-matrix/vec2.js":8,"./gl-matrix/vec3.js":9,"./gl-matrix/vec4.js":10}],2:[function(require,module,exports){
+},{"./gl-matrix/common.js":9,"./gl-matrix/mat2.js":10,"./gl-matrix/mat2d.js":11,"./gl-matrix/mat3.js":12,"./gl-matrix/mat4.js":13,"./gl-matrix/quat.js":14,"./gl-matrix/vec2.js":15,"./gl-matrix/vec3.js":16,"./gl-matrix/vec4.js":17}],9:[function(require,module,exports){
 /* Copyright (c) 2015, Brandon Jones, Colin MacKenzie IV.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -108,7 +384,7 @@ glMatrix.equals = function(a, b) {
 
 module.exports = glMatrix;
 
-},{}],3:[function(require,module,exports){
+},{}],10:[function(require,module,exports){
 /* Copyright (c) 2015, Brandon Jones, Colin MacKenzie IV.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -546,7 +822,7 @@ mat2.multiplyScalarAndAdd = function(out, a, b, scale) {
 
 module.exports = mat2;
 
-},{"./common.js":2}],4:[function(require,module,exports){
+},{"./common.js":9}],11:[function(require,module,exports){
 /* Copyright (c) 2015, Brandon Jones, Colin MacKenzie IV.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -1017,7 +1293,7 @@ mat2d.equals = function (a, b) {
 
 module.exports = mat2d;
 
-},{"./common.js":2}],5:[function(require,module,exports){
+},{"./common.js":9}],12:[function(require,module,exports){
 /* Copyright (c) 2015, Brandon Jones, Colin MacKenzie IV.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -1765,7 +2041,7 @@ mat3.equals = function (a, b) {
 
 module.exports = mat3;
 
-},{"./common.js":2}],6:[function(require,module,exports){
+},{"./common.js":9}],13:[function(require,module,exports){
 /* Copyright (c) 2015, Brandon Jones, Colin MacKenzie IV.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -3903,7 +4179,7 @@ mat4.equals = function (a, b) {
 
 module.exports = mat4;
 
-},{"./common.js":2}],7:[function(require,module,exports){
+},{"./common.js":9}],14:[function(require,module,exports){
 /* Copyright (c) 2015, Brandon Jones, Colin MacKenzie IV.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -4505,7 +4781,7 @@ quat.equals = vec4.equals;
 
 module.exports = quat;
 
-},{"./common.js":2,"./mat3.js":5,"./vec3.js":9,"./vec4.js":10}],8:[function(require,module,exports){
+},{"./common.js":9,"./mat3.js":12,"./vec3.js":16,"./vec4.js":17}],15:[function(require,module,exports){
 /* Copyright (c) 2015, Brandon Jones, Colin MacKenzie IV.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -5094,7 +5370,7 @@ vec2.equals = function (a, b) {
 
 module.exports = vec2;
 
-},{"./common.js":2}],9:[function(require,module,exports){
+},{"./common.js":9}],16:[function(require,module,exports){
 /* Copyright (c) 2015, Brandon Jones, Colin MacKenzie IV.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -5873,7 +6149,7 @@ vec3.equals = function (a, b) {
 
 module.exports = vec3;
 
-},{"./common.js":2}],10:[function(require,module,exports){
+},{"./common.js":9}],17:[function(require,module,exports){
 /* Copyright (c) 2015, Brandon Jones, Colin MacKenzie IV.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -6484,7 +6760,7 @@ vec4.equals = function (a, b) {
 
 module.exports = vec4;
 
-},{"./common.js":2}],11:[function(require,module,exports){
+},{"./common.js":9}],18:[function(require,module,exports){
 /**
  * AUTHOR OF INITIAL JS LIBRARY
  * k-d Tree JavaScript - V 1.0
@@ -6943,11 +7219,11 @@ module.exports = {
   }
 }
 
-},{}],12:[function(require,module,exports){
+},{}],19:[function(require,module,exports){
 module.exports={
   "name": "serve-sofa-hrir",
   "exports": "serveSofaHrir",
-  "version": "0.4.1",
+  "version": "0.4.2",
   "description": "Utility to fetch and shape sofa formated HRIR from server",
   "main": "./dist/",
   "standalone": "serveSofaHrir",
@@ -6973,7 +7249,8 @@ module.exports={
   "license": "BSD-3-Clause",
   "dependencies": {
     "gl-matrix": "^2.3.1",
-    "kd.tree": "akshaylive/node-kdt#39bc780704a324393bca68a17cf7bc71be8544c6"
+    "kd.tree": "akshaylive/node-kdt#39bc780704a324393bca68a17cf7bc71be8544c6",
+    "fractional-delay": "git://github.com/Ircam-RnD/fractional-delay#gh-pages"
   },
   "repository": {
     "type": "git",
@@ -7003,19 +7280,19 @@ module.exports={
   }
 }
 
-},{}],13:[function(require,module,exports){
+},{}],20:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.resampleFloat32Array = resampleFloat32Array;
-/**
- * @fileOverview Audio utilities
- * @author Jean-Philippe.Lambert@ircam.fr
- * @copyright 2016 IRCAM, Paris, France
- * @license BSD-3-Clause
- */
+
+var _fractionalDelay = require('fractional-delay');
+
+var _fractionalDelay2 = _interopRequireDefault(_fractionalDelay);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /**
  * Convert an array, typed or not, to a Float32Array, with possible re-sampling.
@@ -7033,9 +7310,11 @@ function resampleFloat32Array() {
     var inputSamples = options.inputSamples;
     var inputSampleRate = options.inputSampleRate;
 
+    var inputDelay = typeof options.inputDelay !== 'undefined' ? options.inputDelay : 0;
+
     var outputSampleRate = typeof options.outputSampleRate !== 'undefined' ? options.outputSampleRate : inputSampleRate;
 
-    if (inputSampleRate === outputSampleRate) {
+    if (inputSampleRate === outputSampleRate && inputDelay === 0) {
       resolve(new Float32Array(inputSamples));
     } else {
       try {
@@ -7045,7 +7324,13 @@ function resampleFloat32Array() {
 
         var inputBuffer = context.createBuffer(1, inputSamples.length, inputSampleRate);
 
-        inputBuffer.getChannelData(0).set(inputSamples);
+        // create fractional delay
+        var maxDelay = 1.0;
+        var fractionalDelay = new _fractionalDelay2.default(inputSampleRate, maxDelay);
+        fractionalDelay.setDelay(inputDelay / inputSampleRate);
+
+        // create input buffer after applying fractional delay
+        inputBuffer.getChannelData(0).set(fractionalDelay.process(inputSamples));
 
         var source = context.createBufferSource();
         source.buffer = inputBuffer;
@@ -7066,13 +7351,18 @@ function resampleFloat32Array() {
   });
 
   return promise;
-}
+} /**
+   * @fileOverview Audio utilities
+   * @author Jean-Philippe.Lambert@ircam.fr
+   * @copyright 2016 IRCAM, Paris, France
+   * @license BSD-3-Clause
+   */
 
 exports.default = {
   resampleFloat32Array: resampleFloat32Array
 };
 
-},{}],14:[function(require,module,exports){
+},{"fractional-delay":7}],21:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -7142,7 +7432,7 @@ exports.default = {
   tree: _kd2.default
 };
 
-},{"kd.tree":11}],15:[function(require,module,exports){
+},{"kd.tree":18}],22:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -7680,7 +7970,7 @@ exports.default = {
   systemType: systemType
 };
 
-},{"./degree":16}],16:[function(require,module,exports){
+},{"./degree":23}],23:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -7773,7 +8063,7 @@ exports.default = {
   toRadianFactor: toRadianFactor
 };
 
-},{}],17:[function(require,module,exports){
+},{}],24:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -7817,7 +8107,7 @@ exports.default = {
 //   sofa,
 // };
 
-},{"./sofa/HrtfSet":19,"./sofa/ServerDataBase":20}],18:[function(require,module,exports){
+},{"./sofa/HrtfSet":26,"./sofa/ServerDataBase":27}],25:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -7883,7 +8173,7 @@ exports.default = {
   version: version
 };
 
-},{"../package.json":12}],19:[function(require,module,exports){
+},{"../package.json":19}],26:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -8238,7 +8528,7 @@ var HrtfSet = exports.HrtfSet = function () {
 
   }, {
     key: '_generateIndicesPositionsFirs',
-    value: function _generateIndicesPositionsFirs(indices, positions, firs) {
+    value: function _generateIndicesPositionsFirs(indices, positions, firs, delays) {
       var _this5 = this;
 
       var sofaFirsPromises = firs.map(function (sofaFirChannels, index) {
@@ -8247,9 +8537,24 @@ var HrtfSet = exports.HrtfSet = function () {
           throw new Error('Bad number of channels' + (' for IR index ' + indices[index]) + (' (' + channelCount + ' instead of 2)'));
         }
 
-        var sofaFirsChannelsPromises = sofaFirChannels.map(function (fir) {
+        /**
+        * input delay can either be [[delayLeft, delayRight]]: unique for all
+        * fir values, or [[dL1, dR1], ..., [dLN, dRN]]: per-position specific,
+        * e.g. for minimum phase firs.
+        */
+        if (delays[0].length !== 2) {
+          throw new Error('Bad delay format' + (' for IR index ' + indices[index]) + (' (first element in Data.Delay is ' + delays[0]) + ' instead of [[delayL, delayR]] )');
+        }
+        var inputDelays = typeof delays[index] !== 'undefined' ? delays[index] : delays[0];
+
+        var sofaFirsChannelsPromises = sofaFirChannels.map(function (fir, index2) {
+          if (inputDelays[index2] < 0) {
+            // accept only positive delays
+            throw new Error('Negative delay detected (not handled at the moment):' + (' delay index ' + indices[index]) + (' channel ' + index2));
+          }
           return (0, _utilities.resampleFloat32Array)({
             inputSamples: fir,
+            inputDelay: inputDelays[index2],
             inputSampleRate: _this5._sofaSampleRate,
             outputSampleRate: _this5._audioContext.sampleRate
           });
@@ -8409,7 +8714,7 @@ var HrtfSet = exports.HrtfSet = function () {
             _this7._generateIndicesPositionsFirs(sourcePositions.map(function (position, index) {
               return index;
             }), // full
-            sourcePositions, data['Data.IR'].data).then(function (indicesPositionsFirs) {
+            sourcePositions, data['Data.IR'].data, data['Data.Delay'].data).then(function (indicesPositionsFirs) {
               _this7._createKdTree(indicesPositionsFirs);
               _this7._sofaUrl = url;
               resolve(_this7);
@@ -8462,7 +8767,7 @@ var HrtfSet = exports.HrtfSet = function () {
               // (meta-data is already loaded)
 
               var sourcePositions = _this8._sourcePositionsToGl(data);
-              _this8._generateIndicesPositionsFirs([index], sourcePositions, data['Data.IR'].data).then(function (indicesPositionsFirs) {
+              _this8._generateIndicesPositionsFirs([index], sourcePositions, data['Data.IR'].data, data['Data.Delay'].data).then(function (indicesPositionsFirs) {
                 // One position per URL here
                 // Array made of multiple promises, later
                 resolve(indicesPositionsFirs[0]);
@@ -8521,7 +8826,7 @@ var HrtfSet = exports.HrtfSet = function () {
         this._sofaMetaData.OriginalSampleRate = this._sofaSampleRate;
       }
 
-      this._sofaDelay = typeof data['Data.Delay'] !== 'undefined' ? data['Data.Delay'].data[0] : 0;
+      this._sofaDelay = typeof data['Data.Delay'] !== 'undefined' ? data['Data.Delay'].data : [0, 0];
 
       this._sofaRoomVolume = typeof data.RoomVolume !== 'undefined' ? data.RoomVolume.data[0] : undefined;
 
@@ -8774,7 +9079,7 @@ var HrtfSet = exports.HrtfSet = function () {
 
 exports.default = HrtfSet;
 
-},{"../audio/utilities":13,"../geometry/KdTree":14,"../geometry/coordinates":15,"../info":18,"./parseDataSet":21,"./parseSofa":22,"gl-matrix":1}],20:[function(require,module,exports){
+},{"../audio/utilities":20,"../geometry/KdTree":21,"../geometry/coordinates":22,"../info":25,"./parseDataSet":28,"./parseSofa":29,"gl-matrix":8}],27:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -9068,7 +9373,7 @@ var ServerDataBase = exports.ServerDataBase = function () {
 
 exports.default = ServerDataBase;
 
-},{"./parseDataSet":21,"./parseXml":23}],21:[function(require,module,exports){
+},{"./parseDataSet":28,"./parseXml":30}],28:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -9218,7 +9523,7 @@ function parseDataSet(input) {
 
 exports.default = parseDataSet;
 
-},{}],22:[function(require,module,exports){
+},{}],29:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -9418,7 +9723,7 @@ function stringifySofa(sofaSet) {
       type: type,
       attributes: [],
       shape: [1, sofaSet.DataDelay.length],
-      data: [sofaSet.DataDelay]
+      data: sofaSet.DataDelay
     });
   }
 
@@ -9479,7 +9784,7 @@ exports.default = {
   conformSofaCoordinateSystem: conformSofaCoordinateSystem
 };
 
-},{}],23:[function(require,module,exports){
+},{}],30:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -9534,5 +9839,5 @@ if (typeof window.DOMParser !== 'undefined') {
 
 exports.default = parseXml;
 
-},{}]},{},[17])(17)
+},{}]},{},[24])(24)
 });

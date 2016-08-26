@@ -5,6 +5,8 @@
  * @license BSD-3-Clause
  */
 
+import FractionalDelay from 'fractional-delay';
+
 /**
  * Convert an array, typed or not, to a Float32Array, with possible re-sampling.
  *
@@ -19,11 +21,15 @@ export function resampleFloat32Array(options = {}) {
     const inputSamples = options.inputSamples;
     const inputSampleRate = options.inputSampleRate;
 
+    const inputDelay = (typeof options.inputDelay !== 'undefined'
+                              ? options.inputDelay
+                              : 0);
+
     const outputSampleRate = (typeof options.outputSampleRate !== 'undefined'
                               ? options.outputSampleRate
                               : inputSampleRate);
 
-    if (inputSampleRate === outputSampleRate) {
+    if ( (inputSampleRate === outputSampleRate) && (inputDelay === 0) ) {
       resolve(new Float32Array(inputSamples) );
     } else {
       try {
@@ -36,7 +42,13 @@ export function resampleFloat32Array(options = {}) {
         const inputBuffer = context.createBuffer(1, inputSamples.length,
                                                  inputSampleRate);
 
-        inputBuffer.getChannelData(0).set(inputSamples);
+        // create fractional delay
+        const maxDelay = 1.0;
+        const fractionalDelay = new FractionalDelay(inputSampleRate, maxDelay);
+        fractionalDelay.setDelay( inputDelay / inputSampleRate );
+
+        // create input buffer after applying fractional delay
+        inputBuffer.getChannelData(0).set(fractionalDelay.process(inputSamples));
 
         const source = context.createBufferSource();
         source.buffer = inputBuffer;

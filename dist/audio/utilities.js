@@ -4,12 +4,12 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.resampleFloat32Array = resampleFloat32Array;
-/**
- * @fileOverview Audio utilities
- * @author Jean-Philippe.Lambert@ircam.fr
- * @copyright 2016 IRCAM, Paris, France
- * @license BSD-3-Clause
- */
+
+var _fractionalDelay = require('fractional-delay');
+
+var _fractionalDelay2 = _interopRequireDefault(_fractionalDelay);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /**
  * Convert an array, typed or not, to a Float32Array, with possible re-sampling.
@@ -27,9 +27,11 @@ function resampleFloat32Array() {
     var inputSamples = options.inputSamples;
     var inputSampleRate = options.inputSampleRate;
 
+    var inputDelay = typeof options.inputDelay !== 'undefined' ? options.inputDelay : 0;
+
     var outputSampleRate = typeof options.outputSampleRate !== 'undefined' ? options.outputSampleRate : inputSampleRate;
 
-    if (inputSampleRate === outputSampleRate) {
+    if (inputSampleRate === outputSampleRate && inputDelay === 0) {
       resolve(new Float32Array(inputSamples));
     } else {
       try {
@@ -39,7 +41,13 @@ function resampleFloat32Array() {
 
         var inputBuffer = context.createBuffer(1, inputSamples.length, inputSampleRate);
 
-        inputBuffer.getChannelData(0).set(inputSamples);
+        // create fractional delay
+        var maxDelay = 1.0;
+        var fractionalDelay = new _fractionalDelay2.default(inputSampleRate, maxDelay);
+        fractionalDelay.setDelay(inputDelay / inputSampleRate);
+
+        // create input buffer after applying fractional delay
+        inputBuffer.getChannelData(0).set(fractionalDelay.process(inputSamples));
 
         var source = context.createBufferSource();
         source.buffer = inputBuffer;
@@ -60,7 +68,12 @@ function resampleFloat32Array() {
   });
 
   return promise;
-}
+} /**
+   * @fileOverview Audio utilities
+   * @author Jean-Philippe.Lambert@ircam.fr
+   * @copyright 2016 IRCAM, Paris, France
+   * @license BSD-3-Clause
+   */
 
 exports.default = {
   resampleFloat32Array: resampleFloat32Array

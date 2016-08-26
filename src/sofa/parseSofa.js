@@ -201,7 +201,7 @@ export function stringifySofa(sofaSet) {
       type,
       attributes: [],
       shape: [1, sofaSet.DataDelay.length],
-      data: [sofaSet.DataDelay],
+      data: sofaSet.DataDelay,
     });
   }
 

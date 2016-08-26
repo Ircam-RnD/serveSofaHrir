@@ -352,7 +352,7 @@ var HrtfSet = exports.HrtfSet = function () {
 
   }, {
     key: '_generateIndicesPositionsFirs',
-    value: function _generateIndicesPositionsFirs(indices, positions, firs) {
+    value: function _generateIndicesPositionsFirs(indices, positions, firs, delays) {
       var _this5 = this;
 
       var sofaFirsPromises = firs.map(function (sofaFirChannels, index) {
@@ -361,9 +361,24 @@ var HrtfSet = exports.HrtfSet = function () {
           throw new Error('Bad number of channels' + (' for IR index ' + indices[index]) + (' (' + channelCount + ' instead of 2)'));
         }
 
-        var sofaFirsChannelsPromises = sofaFirChannels.map(function (fir) {
+        /**
+        * input delay can either be [[delayLeft, delayRight]]: unique for all
+        * fir values, or [[dL1, dR1], ..., [dLN, dRN]]: per-position specific,
+        * e.g. for minimum phase firs.
+        */
+        if (delays[0].length !== 2) {
+          throw new Error('Bad delay format' + (' for IR index ' + indices[index]) + (' (first element in Data.Delay is ' + delays[0]) + ' instead of [[delayL, delayR]] )');
+        }
+        var inputDelays = typeof delays[index] !== 'undefined' ? delays[index] : delays[0];
+
+        var sofaFirsChannelsPromises = sofaFirChannels.map(function (fir, index2) {
+          if (inputDelays[index2] < 0) {
+            // accept only positive delays
+            throw new Error('Negative delay detected (not handled at the moment):' + (' delay index ' + indices[index]) + (' channel ' + index2));
+          }
           return (0, _utilities.resampleFloat32Array)({
             inputSamples: fir,
+            inputDelay: inputDelays[index2],
             inputSampleRate: _this5._sofaSampleRate,
             outputSampleRate: _this5._audioContext.sampleRate
           });
@@ -523,7 +538,7 @@ var HrtfSet = exports.HrtfSet = function () {
             _this7._generateIndicesPositionsFirs(sourcePositions.map(function (position, index) {
               return index;
             }), // full
-            sourcePositions, data['Data.IR'].data).then(function (indicesPositionsFirs) {
+            sourcePositions, data['Data.IR'].data, data['Data.Delay'].data).then(function (indicesPositionsFirs) {
               _this7._createKdTree(indicesPositionsFirs);
               _this7._sofaUrl = url;
               resolve(_this7);
@@ -576,7 +591,7 @@ var HrtfSet = exports.HrtfSet = function () {
               // (meta-data is already loaded)
 
               var sourcePositions = _this8._sourcePositionsToGl(data);
-              _this8._generateIndicesPositionsFirs([index], sourcePositions, data['Data.IR'].data).then(function (indicesPositionsFirs) {
+              _this8._generateIndicesPositionsFirs([index], sourcePositions, data['Data.IR'].data, data['Data.Delay'].data).then(function (indicesPositionsFirs) {
                 // One position per URL here
                 // Array made of multiple promises, later
                 resolve(indicesPositionsFirs[0]);
@@ -635,7 +650,7 @@ var HrtfSet = exports.HrtfSet = function () {
         this._sofaMetaData.OriginalSampleRate = this._sofaSampleRate;
       }
 
-      this._sofaDelay = typeof data['Data.Delay'] !== 'undefined' ? data['Data.Delay'].data[0] : 0;
+      this._sofaDelay = typeof data['Data.Delay'] !== 'undefined' ? data['Data.Delay'].data : [0, 0];
 
       this._sofaRoomVolume = typeof data.RoomVolume !== 'undefined' ? data.RoomVolume.data[0] : undefined;
 
