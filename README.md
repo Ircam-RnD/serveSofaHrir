@@ -243,14 +243,9 @@ transcription. (See the [jsdoc.json] and [esdoc.json] files.)
 
 This module is released under the [BSD-3-Clause] license.
 
-## Acknowledgements
+## Acknowledgments
 
-This research was developped by both [Acoustic And Cognitive Spaces] and
-[Analysis of Musical Practices] IRCAM research teams. A previous version
-was part of the WAVE project, funded by ANR (French National Research
-Agency). The current version, supporting multiple sources and a listener,
-the SOFA standard, and the access to a server, is part of the [CoSiMa]
-project, funded by ANR.
+This research was developed by both [Acoustic And Cognitive Spaces] and [Analysis of Musical Practices] IRCAM research teams. A previous version was part of the WAVE project, funded by ANR (French National Research Agency). The current version, supporting multiple sources and a listener, HRTFs SOFA format and the access to a HRTF server, is part of the [CoSiMa] project, funded by ANR.The HRTF server and efforts for standardization of the HRTF SOFA format ([AES69 standard]) benefited from the financial support of the [Bili] project (French funding program FUI). 
 
 [//]: # (Avoid relative links for use with https://github.com/README.md)
 [//]: # (and http://cdn.rawgit.com/Ircam-RnD/binauralFIR/next-gh-pages/doc/index.html)
@@ -291,3 +286,5 @@ project, funded by ANR.
 [T. Carpentier article]: http://wac.ircam.fr/pdf/demo/wac15_submission_16.pdf
 [test directory]: https://github.com/Ircam-RnD/binauralFIR/tree/next-develop/test/
 [Web Audio API]: https://webaudio.github.io/web-audio-api/
+[AES69 standard]: http://www.aes.org/publications/standards/search.cfm?docID=99
+[Bili]: http://www.bili-project.org/
