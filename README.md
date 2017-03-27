@@ -2,14 +2,15 @@
 
 Load a Sofa formatted HRTFs set from either a local or distant server. Instant access to closest match HRTF IRs {left,right} as an [AudioBuffer](https://developer.mozilla.org/fr/docs/Web/API/AudioBuffer) object for any given position. First published as a subclass of the [binauralFIR] library.
 
-This library provides an access to a server, in order to load a set of
-Head-related transfer functions ([HRTF]).
 
-This library is compatible with the [Web Audio API]. The novelty of this
-library is that it permits to use a custom [HRTF] dataset (see
-[T. Carpentier article]).
+## How to use ##
 
-See [binauralFIR] for an example use-case.
+Add the library to your node project:
+```bash
+npm install Ircam-RnD/serveSofaHrir
+```
+
+and check the  ``./examples`` folder for implementation details. See [binauralFIR] for an example use-case.
 
 ## Documentation ##
 
