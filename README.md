@@ -1,6 +1,6 @@
-# Serve SOFA HRIR #
+# Load Sofa formatted HRTFs from server in NodeJS #
 
-Javascript package used to load SOFA HRIR files from server for e.g. binaural audio rendering.
+Load a Sofa formatted HRTFs set from either a local or distant server. Instant access to closest match HRTF IRs {left,right} as an [AudioBuffer](https://developer.mozilla.org/fr/docs/Web/API/AudioBuffer) object for any given position. First published as a subclass of the [binauralFIR] library.
 
 This library provides an access to a server, in order to load a set of
 Head-related transfer functions ([HRTF]).
