@@ -3,9 +3,6 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-
-var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol ? "symbol" : typeof obj; };
-
 exports.parseSofa = parseSofa;
 exports.stringifySofa = stringifySofa;
 exports.conformSofaCoordinateSystem = conformSofaCoordinateSystem;
@@ -28,42 +25,36 @@ exports.conformSofaCoordinateSystem = conformSofaCoordinateSystem;
  */
 function parseSofa(sofaString) {
   try {
-    var _ret = function () {
-      var sofa = JSON.parse(sofaString);
-      var sofaSet = {};
+    var sofa = JSON.parse(sofaString);
+    var sofaSet = {};
 
-      sofaSet.name = sofa.name;
+    sofaSet.name = sofa.name;
 
-      if (typeof sofa.attributes !== 'undefined') {
-        sofaSet.metaData = {};
-        var metaData = sofa.attributes.find(function (e) {
-          return e.name === 'NC_GLOBAL';
-        });
-        if (typeof metaData !== 'undefined') {
-          metaData.attributes.forEach(function (e) {
-            sofaSet.metaData[e.name] = e.value[0];
-          });
-        }
-      }
-
-      if (typeof sofa.leaves !== 'undefined') {
-        var data = sofa.leaves;
-        data.forEach(function (d) {
-          sofaSet[d.name] = {};
-          d.attributes.forEach(function (a) {
-            sofaSet[d.name][a.name] = a.value[0];
-          });
-          sofaSet[d.name].shape = d.shape;
-          sofaSet[d.name].data = d.data;
+    if (typeof sofa.attributes !== 'undefined') {
+      sofaSet.metaData = {};
+      var metaData = sofa.attributes.find(function (e) {
+        return e.name === 'NC_GLOBAL';
+      });
+      if (typeof metaData !== 'undefined') {
+        metaData.attributes.forEach(function (e) {
+          sofaSet.metaData[e.name] = e.value[0];
         });
       }
+    }
 
-      return {
-        v: sofaSet
-      };
-    }();
+    if (typeof sofa.leaves !== 'undefined') {
+      var data = sofa.leaves;
+      data.forEach(function (d) {
+        sofaSet[d.name] = {};
+        d.attributes.forEach(function (a) {
+          sofaSet[d.name][a.name] = a.value[0];
+        });
+        sofaSet[d.name].shape = d.shape;
+        sofaSet[d.name].data = d.data;
+      });
+    }
 
-    if ((typeof _ret === 'undefined' ? 'undefined' : _typeof(_ret)) === "object") return _ret.v;
+    return sofaSet;
   } catch (error) {
     throw new Error('Unable to parse SOFA string. ' + error.message);
   }

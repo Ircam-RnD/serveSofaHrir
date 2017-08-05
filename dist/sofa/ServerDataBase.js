@@ -27,7 +27,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  * SOFA remote data-base.
  */
-
 var ServerDataBase = exports.ServerDataBase = function () {
   /**
    * This is only a constructor, it does not load any thing.
@@ -40,9 +39,8 @@ var ServerDataBase = exports.ServerDataBase = function () {
    * `window.location.protocol` is also `https:`, or `http:`, to avoid
    * mixed contents (that are often blocked).
    */
-
   function ServerDataBase() {
-    var options = arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0];
+    var options = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
 
     _classCallCheck(this, ServerDataBase);
 
@@ -79,8 +77,8 @@ var ServerDataBase = exports.ServerDataBase = function () {
     value: function loadCatalogue() {
       var _this = this;
 
-      var sourceUrl = arguments.length <= 0 || arguments[0] === undefined ? this._server + '/catalog.xml' : arguments[0];
-      var destination = arguments.length <= 1 || arguments[1] === undefined ? this._catalogue : arguments[1];
+      var sourceUrl = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : this._server + '/catalog.xml';
+      var destination = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : this._catalogue;
 
       var promise = new Promise(function (resolve, reject) {
         var request = new window.XMLHttpRequest();
@@ -162,14 +160,13 @@ var ServerDataBase = exports.ServerDataBase = function () {
   }, {
     key: 'getUrls',
     value: function getUrls() {
-      var options = arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0];
+      var options = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
 
       // the number and the order of the filters in the following array must
       // match the URL sub-directories
       var filters = [options.convention, options.dataBase, options.equalisation, options.sampleRate, options.sosOrder];
 
       // any where in URL
-      // in file name
       var freePattern = typeof options.freePattern === 'number' ? options.freePattern.toString() : options.freePattern;
 
       var pattern = filters.reduce(function (global, local) {

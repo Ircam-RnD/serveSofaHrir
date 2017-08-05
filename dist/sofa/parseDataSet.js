@@ -99,16 +99,14 @@ function _parseDefinition(input) {
     inputs.forEach(function (inputSingle) {
       var parts = _definitionSplit.exec(inputSingle);
       if (parts !== null && parts.length > 3) {
-        (function () {
-          var current = [];
-          current[0] = parts[2];
-          current[1] = {};
-          current[1].type = parts[1];
-          _parseDimension(parts[3]).forEach(function (dimension) {
-            current[1][dimension[0]] = dimension[1];
-          });
-          parse.push(current);
-        })();
+        var current = [];
+        current[0] = parts[2];
+        current[1] = {};
+        current[1].type = parts[1];
+        _parseDimension(parts[3]).forEach(function (dimension) {
+          current[1][dimension[0]] = dimension[1];
+        });
+        parse.push(current);
       }
     });
   }

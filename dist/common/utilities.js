@@ -21,7 +21,7 @@ exports.almostEqualsModulo = almostEqualsModulo;
  * @returns {Number} Math.abs(value - reference) <= tolerance;
  */
 function almostEquals(value, reference) {
-  var tolerance = arguments.length <= 2 || arguments[2] === undefined ? Number.EPSILON : arguments[2];
+  var tolerance = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : Number.EPSILON;
 
   return Math.abs(value - reference) <= tolerance;
 }
@@ -37,7 +37,7 @@ function almostEquals(value, reference) {
  * @returns {Number} Math.abs(value - reference) % modulo <= tolerance;
  */
 function almostEqualsModulo(value, reference, modulo) {
-  var tolerance = arguments.length <= 3 || arguments[3] === undefined ? Number.EPSILON : arguments[3];
+  var tolerance = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : Number.EPSILON;
 
   return Math.abs(value - reference) % modulo <= tolerance;
 }

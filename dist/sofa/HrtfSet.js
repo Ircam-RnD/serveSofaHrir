@@ -16,7 +16,7 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 var _glMatrix = require('gl-matrix');
 
-var _glMatrix2 = _interopRequireDefault(_glMatrix);
+var glMatrix = _interopRequireWildcard(_glMatrix);
 
 var _info = require('../info');
 
@@ -38,6 +38,8 @@ var _utilities = require('../audio/utilities');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+
 function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -45,7 +47,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  * Container for HRTF set.
  */
-
 var HrtfSet = exports.HrtfSet = function () {
 
   /**
@@ -68,9 +69,8 @@ var HrtfSet = exports.HrtfSet = function () {
    * full load of SOFA file, instead of multiple partial loading.
    * {@link HrtfSet#filterAfterLoad}
    */
-
   function HrtfSet() {
-    var options = arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0];
+    var options = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
 
     _classCallCheck(this, HrtfSet);
 
@@ -163,14 +163,14 @@ var HrtfSet = exports.HrtfSet = function () {
           });
         });
       } else {
-          promise = this._loadSofaFull(url).then(function () {
-            if (typeof _this2._filterPositions !== 'undefined' && _this2.filterAfterLoad) {
-              _this2.applyFilterPositions();
-            }
-            _this2._ready = true;
-            return _this2; // final resolve
-          });
-        }
+        promise = this._loadSofaFull(url).then(function () {
+          if (typeof _this2._filterPositions !== 'undefined' && _this2.filterAfterLoad) {
+            _this2.applyFilterPositions();
+          }
+          _this2._ready = true;
+          return _this2; // final resolve
+        });
+      }
 
       return promise;
     }
@@ -465,33 +465,31 @@ var HrtfSet = exports.HrtfSet = function () {
           }
 
           try {
-            (function () {
-              var data = (0, _parseSofa.parseSofa)(request.response);
-              _this6._setMetaData(data, sourceUrl);
+            var data = (0, _parseSofa.parseSofa)(request.response);
+            _this6._setMetaData(data, sourceUrl);
 
-              var sourcePositions = _this6._sourcePositionsToGl(data);
-              var hrtfPositions = sourcePositions.map(function (position, index) {
-                return {
-                  x: position[0],
-                  y: position[1],
-                  z: position[2],
-                  index: index
-                };
-              });
+            var sourcePositions = _this6._sourcePositionsToGl(data);
+            var hrtfPositions = sourcePositions.map(function (position, index) {
+              return {
+                x: position[0],
+                y: position[1],
+                z: position[2],
+                index: index
+              };
+            });
 
-              var kdt = _KdTree2.default.tree.createKdTree(hrtfPositions, _KdTree2.default.distanceSquared, ['x', 'y', 'z']);
+            var kdt = _KdTree2.default.tree.createKdTree(hrtfPositions, _KdTree2.default.distanceSquared, ['x', 'y', 'z']);
 
-              var nearestIndices = _this6._filterPositions.map(function (current) {
-                return kdt.nearest({ x: current[0], y: current[1], z: current[2] }, 1).pop()[0] // nearest data
-                .index;
-              });
+            var nearestIndices = _this6._filterPositions.map(function (current) {
+              return kdt.nearest({ x: current[0], y: current[1], z: current[2] }, 1).pop()[0] // nearest data
+              .index;
+            });
 
-              // filter out duplicates
-              nearestIndices = [].concat(_toConsumableArray(new Set(nearestIndices)));
+            // filter out duplicates
+            nearestIndices = [].concat(_toConsumableArray(new Set(nearestIndices)));
 
-              _this6._sofaUrl = sourceUrl;
-              resolve(nearestIndices);
-            })();
+            _this6._sofaUrl = sourceUrl;
+            resolve(nearestIndices);
           } catch (error) {
             // re-throw
             reject(new Error('Unable to parse ' + positionsUrl + '. ' + error.message));
@@ -664,7 +662,7 @@ var HrtfSet = exports.HrtfSet = function () {
 
       var listenerUp = _coordinates2.default.sofaToSofaCartesian([], data.ListenerUp.data[0], (0, _parseSofa.conformSofaCoordinateSystem)(data.ListenerUp.Type || 'cartesian'));
 
-      this._sofaToGl = _glMatrix2.default.mat4.lookAt([], listenerPosition, listenerView, listenerUp);
+      this._sofaToGl = glMatrix.mat4.lookAt([], listenerPosition, listenerView, listenerUp);
     }
 
     /**
@@ -687,14 +685,14 @@ var HrtfSet = exports.HrtfSet = function () {
       switch (sourceCoordinateSystem) {
         case 'cartesian':
           sourcePositions.forEach(function (position) {
-            _glMatrix2.default.vec3.transformMat4(position, position, _this9._sofaToGl);
+            glMatrix.vec3.transformMat4(position, position, _this9._sofaToGl);
           });
           break;
 
         case 'spherical':
           sourcePositions.forEach(function (position) {
             _coordinates2.default.sofaSphericalToSofaCartesian(position, position); // in-place
-            _glMatrix2.default.vec3.transformMat4(position, position, _this9._sofaToGl);
+            glMatrix.vec3.transformMat4(position, position, _this9._sofaToGl);
           });
           break;
 
