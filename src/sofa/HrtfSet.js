@@ -7,7 +7,7 @@
  * @license BSD-3-Clause
  */
 
-import glMatrix from 'gl-matrix';
+import * as glMatrix from 'gl-matrix';
 
 import info from '../info';
 import { parseDataSet } from './parseDataSet';
