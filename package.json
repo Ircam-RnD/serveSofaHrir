@@ -28,7 +28,7 @@
   "dependencies": {
     "gl-matrix": "^2.4.0",
     "kd.tree": "akshaylive/node-kdt#39bc780704a324393bca68a17cf7bc71be8544c6",
-    "fractional-delay": "git://github.com/Ircam-RnD/fractional-delay#gh-pages"
+    "fractional-delay": "Ircam-RnD/fractional-delay#gh-pages"
   },
   "repository": {
     "type": "git",
